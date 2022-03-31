@@ -17,6 +17,11 @@
 		928B0C3B27F6366400DA5032 /* StarZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C3A27F6366400DA5032 /* StarZoneTests.swift */; };
 		928B0C4527F6366400DA5032 /* StarZoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C4427F6366400DA5032 /* StarZoneUITests.swift */; };
 		928B0C4727F6366400DA5032 /* StarZoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C4627F6366400DA5032 /* StarZoneUITestsLaunchTests.swift */; };
+		928B0C6027F6454B00DA5032 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C5F27F6454B00DA5032 /* LoginViewController.swift */; };
+		928B0C6327F6462300DA5032 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6227F6462300DA5032 /* LandingViewController.swift */; };
+		928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6527F655C700DA5032 /* SignupViewController.swift */; };
+		928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */; };
+		928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6A27F65E4900DA5032 /* FooterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		928B0C4027F6366400DA5032 /* StarZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarZoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		928B0C4427F6366400DA5032 /* StarZoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarZoneUITests.swift; sourceTree = "<group>"; };
 		928B0C4627F6366400DA5032 /* StarZoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarZoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		928B0C5F27F6454B00DA5032 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		928B0C6227F6462300DA5032 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		928B0C6527F655C700DA5032 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavViewController.swift; sourceTree = "<group>"; };
+		928B0C6A27F65E4900DA5032 /* FooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,11 @@
 		928B0C1F27F6366300DA5032 /* StarZone */ = {
 			isa = PBXGroup;
 			children = (
+				928B0C5727F6426400DA5032 /* Classes */,
+				928B0C5327F6423300DA5032 /* Resources */,
 				928B0C2027F6366300DA5032 /* AppDelegate.swift */,
 				928B0C2227F6366300DA5032 /* SceneDelegate.swift */,
 				928B0C2427F6366300DA5032 /* ViewController.swift */,
-				928B0C2627F6366300DA5032 /* Main.storyboard */,
-				928B0C2C27F6366400DA5032 /* Assets.xcassets */,
 				928B0C2E27F6366400DA5032 /* LaunchScreen.storyboard */,
 				928B0C3127F6366400DA5032 /* Info.plist */,
 				928B0C2927F6366300DA5032 /* StarZone.xcdatamodeld */,
@@ -128,6 +138,107 @@
 				928B0C4627F6366400DA5032 /* StarZoneUITestsLaunchTests.swift */,
 			);
 			path = StarZoneUITests;
+			sourceTree = "<group>";
+		};
+		928B0C5327F6423300DA5032 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C5627F6425200DA5032 /* UI */,
+				928B0C5527F6424900DA5032 /* Fonts */,
+				928B0C5427F6424200DA5032 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		928B0C5427F6424200DA5032 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C2C27F6366400DA5032 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		928B0C5527F6424900DA5032 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		928B0C5627F6425200DA5032 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C2627F6366300DA5032 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		928B0C5727F6426400DA5032 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C5B27F6428A00DA5032 /* Services */,
+				928B0C5A27F6428500DA5032 /* Models */,
+				928B0C5927F6427900DA5032 /* ViewControllers */,
+				928B0C5827F6427300DA5032 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		928B0C5827F6427300DA5032 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		928B0C5927F6427900DA5032 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C6427F655B100DA5032 /* Signup */,
+				928B0C6127F6460F00DA5032 /* Landing */,
+				928B0C5E27F6452000DA5032 /* Login */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		928B0C5A27F6428500DA5032 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		928B0C5B27F6428A00DA5032 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		928B0C5E27F6452000DA5032 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C5F27F6454B00DA5032 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		928B0C6127F6460F00DA5032 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C6227F6462300DA5032 /* LandingViewController.swift */,
+				928B0C6A27F65E4900DA5032 /* FooterViewController.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		928B0C6427F655B100DA5032 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				928B0C6527F655C700DA5032 /* SignupViewController.swift */,
+				928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +373,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				928B0C2527F6366300DA5032 /* ViewController.swift in Sources */,
+				928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */,
 				928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */,
 				928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */,
+				928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */,
+				928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */,
+				928B0C6027F6454B00DA5032 /* LoginViewController.swift in Sources */,
+				928B0C6327F6462300DA5032 /* LandingViewController.swift in Sources */,
 				928B0C2B27F6366300DA5032 /* StarZone.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
