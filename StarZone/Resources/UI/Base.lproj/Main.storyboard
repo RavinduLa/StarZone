@@ -85,6 +85,11 @@
                                         <rect key="frame" x="5" y="25" width="84" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
+                                        <connections>
+                                            <segue destination="Ii2-ZC-9KP" kind="popoverPresentation" popoverAnchorView="GKJ-7b-gml" id="hax-o8-eau">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-ip-DDA">
                                         <rect key="frame" x="112" y="25" width="151" height="31"/>
@@ -148,6 +153,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXL-h3-HGO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-304.34782608695656" y="-622.09821428571422"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="NYe-JM-9Am">
+            <objects>
+                <viewController id="Ii2-ZC-9KP" customClass="AboutUsViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r1T-qg-u2P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucg-O3-2LM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                <items>
+                                    <navigationItem title="About Us" id="M8T-dE-BVM"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarZone Curved" translatesAutoresizingMaskIntoConstraints="NO" id="rBj-yu-UxS">
+                                <rect key="frame" x="87" y="100" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PRq-Gg-EVz"/>
+                                    <constraint firstAttribute="width" constant="240" id="a5P-fH-cyJ"/>
+                                    <constraint firstAttribute="width" secondItem="rBj-yu-UxS" secondAttribute="height" multiplier="15:8" id="hF9-pZ-C7X"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcP-ko-81h">
+                                <rect key="frame" x="20" y="293" width="374" height="219"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LcP-ko-81h" secondAttribute="height" multiplier="374:219" id="AaE-zs-Wup"/>
+                                </constraints>
+                                <string key="text">At Star Zone we are commited to bring you the highest quality items through our excellent service. Our skilled and dedicated staff is always ready to serve our valuable customers.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ACY-Ut-DRT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ucg-O3-2LM" firstAttribute="top" secondItem="ACY-Ut-DRT" secondAttribute="top" id="4Im-ED-0Rb"/>
+                            <constraint firstItem="ACY-Ut-DRT" firstAttribute="bottom" secondItem="rBj-yu-UxS" secondAttribute="bottom" constant="580" id="5W7-oX-zzL"/>
+                            <constraint firstItem="ACY-Ut-DRT" firstAttribute="trailing" secondItem="rBj-yu-UxS" secondAttribute="trailing" constant="87" id="JOb-rC-3ah"/>
+                            <constraint firstItem="rBj-yu-UxS" firstAttribute="top" secondItem="Ucg-O3-2LM" secondAttribute="bottom" constant="80" id="TmC-AE-FnD"/>
+                            <constraint firstItem="Ucg-O3-2LM" firstAttribute="trailing" secondItem="ACY-Ut-DRT" secondAttribute="trailing" id="XjK-vh-TaN"/>
+                            <constraint firstItem="LcP-ko-81h" firstAttribute="top" secondItem="rBj-yu-UxS" secondAttribute="bottom" constant="65" id="Xtz-z3-5np"/>
+                            <constraint firstItem="LcP-ko-81h" firstAttribute="leading" secondItem="ACY-Ut-DRT" secondAttribute="leading" constant="20" id="dm6-mG-6rD"/>
+                            <constraint firstItem="Ucg-O3-2LM" firstAttribute="leading" secondItem="ACY-Ut-DRT" secondAttribute="leading" id="kYG-fw-1C3"/>
+                            <constraint firstItem="ACY-Ut-DRT" firstAttribute="trailing" secondItem="LcP-ko-81h" secondAttribute="trailing" constant="20" id="olb-M1-fNi"/>
+                            <constraint firstItem="rBj-yu-UxS" firstAttribute="leading" secondItem="ACY-Ut-DRT" secondAttribute="leading" constant="87" id="ps6-oE-1Gc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tvq-uQ-fYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.91304347826087" y="-627.45535714285711"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -289,6 +348,9 @@
     </scenes>
     <resources>
         <image name="StarZone Curved" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
