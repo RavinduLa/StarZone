@@ -88,10 +88,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNV-QR-zSV">
-                                <rect key="frame" x="10" y="684" width="394" height="119"/>
+                                <rect key="frame" x="10" y="700" width="394" height="103"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evl-i7-vOO">
-                                        <rect key="frame" x="5" y="44" width="106.5" height="31"/>
+                                        <rect key="frame" x="5" y="44" width="106.5" height="15"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
                                         <connections>
@@ -101,12 +101,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNE-gg-VaQ">
-                                        <rect key="frame" x="121.5" y="44" width="151" height="31"/>
+                                        <rect key="frame" x="121.5" y="36" width="151" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Terms &amp; Conditions"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tW2-Jb-Htl">
-                                        <rect key="frame" x="302.5" y="44" width="86.5" height="31"/>
+                                        <rect key="frame" x="302.5" y="44" width="86.5" height="15"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
                                     </button>
@@ -154,7 +154,7 @@
                             <constraint firstItem="aKW-8S-BTT" firstAttribute="leading" secondItem="3HT-7H-0s4" secondAttribute="leading" id="qbV-hQ-2ns"/>
                             <constraint firstItem="8F6-ij-VR0" firstAttribute="bottom" secondItem="A8I-qa-Kfa" secondAttribute="bottom" constant="163" id="qr7-zv-8y6"/>
                             <constraint firstItem="CZq-fJ-4NI" firstAttribute="top" secondItem="gCf-hP-uf0" secondAttribute="bottom" constant="20" id="tXp-ou-ozq"/>
-                            <constraint firstItem="zNV-QR-zSV" firstAttribute="top" secondItem="A8I-qa-Kfa" secondAttribute="bottom" constant="34" id="vlk-Wr-u5m"/>
+                            <constraint firstItem="zNV-QR-zSV" firstAttribute="top" secondItem="A8I-qa-Kfa" secondAttribute="bottom" constant="50" id="vlk-Wr-u5m"/>
                             <constraint firstItem="gCf-hP-uf0" firstAttribute="leading" secondItem="CZq-fJ-4NI" secondAttribute="leading" id="zAp-lB-0Dg"/>
                         </constraints>
                     </view>
@@ -356,7 +356,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Mw-4VE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Mw-4VE" userLabel="NoAccountView">
                                 <rect key="frame" x="20" y="558" width="374" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-DG-zam">
@@ -393,10 +393,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWC-MD-Zen" userLabel="BottomButtonsView">
-                                <rect key="frame" x="10" y="622" width="394" height="91"/>
+                                <rect key="frame" x="10" y="714" width="394" height="79"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-SH-PBZ">
-                                        <rect key="frame" x="5" y="30" width="107.5" height="31"/>
+                                        <rect key="frame" x="5" y="24" width="107.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
                                         <connections>
@@ -406,12 +406,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f06-kj-uxz">
-                                        <rect key="frame" x="122.5" y="30" width="149" height="31"/>
+                                        <rect key="frame" x="122.5" y="24" width="149" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Terms &amp; conditions"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-00-NAf">
-                                        <rect key="frame" x="301.5" y="30" width="87.5" height="31"/>
+                                        <rect key="frame" x="301.5" y="24" width="87.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
                                     </button>
@@ -433,11 +433,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IiZ-Qe-CLX" firstAttribute="trailing" secondItem="gnd-X5-rAj" secondAttribute="trailing" constant="25" id="0OT-ni-3UJ"/>
-                            <constraint firstItem="IiZ-Qe-CLX" firstAttribute="bottom" secondItem="LWC-MD-Zen" secondAttribute="bottom" constant="100" id="5Gv-RP-VEe"/>
+                            <constraint firstItem="IiZ-Qe-CLX" firstAttribute="bottom" secondItem="LWC-MD-Zen" secondAttribute="bottom" constant="20" id="5Gv-RP-VEe"/>
                             <constraint firstItem="exo-SW-I03" firstAttribute="top" secondItem="gnd-X5-rAj" secondAttribute="bottom" constant="40" id="5bo-4A-RLF"/>
                             <constraint firstItem="In6-Mw-4VE" firstAttribute="top" secondItem="hng-Dd-LWy" secondAttribute="bottom" constant="30" id="5yQ-ep-8SO"/>
                             <constraint firstItem="IiZ-Qe-CLX" firstAttribute="trailing" secondItem="In6-Mw-4VE" secondAttribute="trailing" constant="20" id="69v-Gc-RMq"/>
-                            <constraint firstItem="LWC-MD-Zen" firstAttribute="top" secondItem="In6-Mw-4VE" secondAttribute="bottom" constant="8" symbolic="YES" id="7IY-9c-PIb"/>
+                            <constraint firstItem="LWC-MD-Zen" firstAttribute="top" secondItem="In6-Mw-4VE" secondAttribute="bottom" constant="100" id="7IY-9c-PIb"/>
                             <constraint firstItem="NG3-ma-NEd" firstAttribute="leading" secondItem="IiZ-Qe-CLX" secondAttribute="leading" constant="25" id="A12-TM-llf"/>
                             <constraint firstItem="gnd-X5-rAj" firstAttribute="leading" secondItem="IiZ-Qe-CLX" secondAttribute="leading" constant="25" id="Bzk-gw-Ptn"/>
                             <constraint firstItem="hng-Dd-LWy" firstAttribute="top" secondItem="exo-SW-I03" secondAttribute="bottom" constant="30" id="C9g-nV-jed"/>
@@ -502,7 +502,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yt6-vm-Grf"/>
+        <segue reference="1hv-Is-CY7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="StarZone Curved" width="1024" height="1024"/>
