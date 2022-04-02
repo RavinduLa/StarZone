@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */; };
+		923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */; };
 		928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C2027F6366300DA5032 /* AppDelegate.swift */; };
 		928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C2227F6366300DA5032 /* SceneDelegate.swift */; };
 		928B0C2527F6366300DA5032 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C2427F6366300DA5032 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		928B0C1D27F6366300DA5032 /* StarZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928B0C2027F6366300DA5032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928B0C2227F6366300DA5032 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */,
+				923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */,
 			);
 			path = PasswordReset;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				928CF01427F7990700D359F1 /* AboutUsViewController.swift in Sources */,
 				928B0C2527F6366300DA5032 /* ViewController.swift in Sources */,
 				923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */,
+				923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */,
 				928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */,
 				928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */,
 				928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */,
