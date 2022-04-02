@@ -22,6 +22,7 @@
 		928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6527F655C700DA5032 /* SignupViewController.swift */; };
 		928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */; };
 		928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6A27F65E4900DA5032 /* FooterViewController.swift */; };
+		928CF01427F7990700D359F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928CF01327F7990700D359F1 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		928B0C6527F655C700DA5032 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavViewController.swift; sourceTree = "<group>"; };
 		928B0C6A27F65E4900DA5032 /* FooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewController.swift; sourceTree = "<group>"; };
+		928CF01327F7990700D359F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		928B0C5927F6427900DA5032 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				928CF01227F798EB00D359F1 /* Extras */,
 				928B0C6427F655B100DA5032 /* Signup */,
 				928B0C6127F6460F00DA5032 /* Landing */,
 				928B0C5E27F6452000DA5032 /* Login */,
@@ -239,6 +242,14 @@
 				928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		928CF01227F798EB00D359F1 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				928CF01327F7990700D359F1 /* AboutUsViewController.swift */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928CF01427F7990700D359F1 /* AboutUsViewController.swift in Sources */,
 				928B0C2527F6366300DA5032 /* ViewController.swift in Sources */,
 				928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */,
 				928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */,

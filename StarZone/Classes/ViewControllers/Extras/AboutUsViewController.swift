@@ -1,30 +1,21 @@
 //
-//  LandingViewController.swift
+//  AboutUsViewController.swift
 //  StarZone
 //
-//  Created by Ravindu Wataketiya on 2022-04-01.
+//  Created by Ravindu Wataketiya on 2022-04-02.
 //
 
 import UIKit
 
-class LandingViewController: UIViewController {
+class AboutUsViewController: UIViewController {
 
-    @IBOutlet weak var btnSignup: UIButton!
-    @IBOutlet weak var btnLogin: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnSignupClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "gotoSignup", sender: self)
-    }
-    
-    @IBAction func btnLoginClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "gotoLogin", sender: self)
-    }
+
     /*
     // MARK: - Navigation
 
