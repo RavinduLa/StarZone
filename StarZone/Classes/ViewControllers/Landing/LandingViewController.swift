@@ -10,6 +10,7 @@ import UIKit
 class LandingViewController: UIViewController {
 
     @IBOutlet weak var btnSignup: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class LandingViewController: UIViewController {
         self.performSegue(withIdentifier: "gotoSignup", sender: self)
     }
     
+    @IBAction func btnLoginClick(_ sender: Any) {
+        self.performSegue(withIdentifier: "gotoLogin", sender: self)
+    }
     /*
     // MARK: - Navigation
 
