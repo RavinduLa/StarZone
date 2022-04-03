@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */; };
 		923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */; };
+		923B82CE27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */; };
+		923B82D027F8C5AB00EBF9D8 /* AllProdctsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CF27F8C5AB00EBF9D8 /* AllProdctsViewController.swift */; };
+		923B82D227F8C5DF00EBF9D8 /* ProductSinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82D127F8C5DF00EBF9D8 /* ProductSinglePageViewController.swift */; };
+		923B82D427F8D67300EBF9D8 /* ProductHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82D327F8D67300EBF9D8 /* ProductHomeViewController.swift */; };
+		923C07F827F9B5710065110E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C07F727F9B5710065110E /* ProductCollectionViewCell.swift */; };
+		923C07FA27F9BBE90065110E /* ProductHomeViewController-prev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C07F927F9BBE90065110E /* ProductHomeViewController-prev.swift */; };
 		928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C2027F6366300DA5032 /* AppDelegate.swift */; };
 		928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C2227F6366300DA5032 /* SceneDelegate.swift */; };
 		928B0C2527F6366300DA5032 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C2427F6366300DA5032 /* ViewController.swift */; };
@@ -47,6 +53,12 @@
 /* Begin PBXFileReference section */
 		923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatuerdProdutsViewController.swift; sourceTree = "<group>"; };
+		923B82CF27F8C5AB00EBF9D8 /* AllProdctsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProdctsViewController.swift; sourceTree = "<group>"; };
+		923B82D127F8C5DF00EBF9D8 /* ProductSinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSinglePageViewController.swift; sourceTree = "<group>"; };
+		923B82D327F8D67300EBF9D8 /* ProductHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHomeViewController.swift; sourceTree = "<group>"; };
+		923C07F727F9B5710065110E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		923C07F927F9BBE90065110E /* ProductHomeViewController-prev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductHomeViewController-prev.swift"; sourceTree = "<group>"; };
 		928B0C1D27F6366300DA5032 /* StarZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928B0C2027F6366300DA5032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928B0C2227F6366300DA5032 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +113,19 @@
 				923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */,
 			);
 			path = PasswordReset;
+			sourceTree = "<group>";
+		};
+		923B82CC27F8C57E00EBF9D8 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */,
+				923B82CF27F8C5AB00EBF9D8 /* AllProdctsViewController.swift */,
+				923B82D127F8C5DF00EBF9D8 /* ProductSinglePageViewController.swift */,
+				923B82D327F8D67300EBF9D8 /* ProductHomeViewController.swift */,
+				923C07F727F9B5710065110E /* ProductCollectionViewCell.swift */,
+				923C07F927F9BBE90065110E /* ProductHomeViewController-prev.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		928B0C1427F6366300DA5032 = {
@@ -209,6 +234,7 @@
 		928B0C5927F6427900DA5032 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				923B82CC27F8C57E00EBF9D8 /* Shop */,
 				923B82C727F89E3A00EBF9D8 /* PasswordReset */,
 				928CF01227F798EB00D359F1 /* Extras */,
 				928B0C6427F655B100DA5032 /* Signup */,
@@ -400,14 +426,20 @@
 				928CF01427F7990700D359F1 /* AboutUsViewController.swift in Sources */,
 				928B0C2527F6366300DA5032 /* ViewController.swift in Sources */,
 				923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */,
+				923B82D427F8D67300EBF9D8 /* ProductHomeViewController.swift in Sources */,
 				923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */,
+				923B82CE27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift in Sources */,
 				928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */,
 				928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */,
 				928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */,
+				923B82D027F8C5AB00EBF9D8 /* AllProdctsViewController.swift in Sources */,
 				928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */,
 				928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */,
 				928B0C6027F6454B00DA5032 /* LoginViewController.swift in Sources */,
+				923B82D227F8C5DF00EBF9D8 /* ProductSinglePageViewController.swift in Sources */,
+				923C07FA27F9BBE90065110E /* ProductHomeViewController-prev.swift in Sources */,
 				928B0C6327F6462300DA5032 /* LandingViewController.swift in Sources */,
+				923C07F827F9B5710065110E /* ProductCollectionViewCell.swift in Sources */,
 				928B0C2B27F6366300DA5032 /* StarZone.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
