@@ -1,26 +1,21 @@
 //
-//  LoginViewController.swift
+//  ResetPasswordViewController.swift
 //  StarZone
 //
-//  Created by Ravindu Wataketiya on 2022-04-01.
+//  Created by Ravindu Wataketiya on 2022-04-02.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class ResetPasswordViewController: UIViewController {
 
-    @IBOutlet weak var btnForgotPassword: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnForgotPasswordClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "gotoForgotPassword", sender: self)
-    }
-    
+
     /*
     // MARK: - Navigation
 
