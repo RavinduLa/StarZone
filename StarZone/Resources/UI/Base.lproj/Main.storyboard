@@ -502,13 +502,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90Z-Jy-8TK">
-                                                    <rect key="frame" x="8" y="157" width="110" height="21"/>
+                                                    <rect key="frame" x="8" y="134" width="110" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-Qu-lxo">
-                                                    <rect key="frame" x="8" y="188" width="39" height="21"/>
+                                                    <rect key="frame" x="8" y="160" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -520,7 +520,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fea-go-FWY">
-                                                    <rect key="frame" x="8" y="224" width="150" height="31"/>
+                                                    <rect key="frame" x="8" y="201" width="150" height="54"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Add to cart"/>
                                                 </button>
@@ -529,14 +529,14 @@
                                                 <constraint firstItem="fea-go-FWY" firstAttribute="leading" secondItem="ZaS-OW-bVX" secondAttribute="leading" constant="8" id="I3D-Hg-FCB"/>
                                                 <constraint firstItem="ZLE-MD-nGO" firstAttribute="top" secondItem="ZaS-OW-bVX" secondAttribute="top" constant="8" id="LoC-Rq-YTz"/>
                                                 <constraint firstItem="90Z-Jy-8TK" firstAttribute="leading" secondItem="ZaS-OW-bVX" secondAttribute="leading" constant="8" id="UPV-Qn-EJA"/>
-                                                <constraint firstItem="vwe-Qu-lxo" firstAttribute="top" secondItem="90Z-Jy-8TK" secondAttribute="bottom" constant="10" id="UT2-U4-5hh"/>
+                                                <constraint firstItem="vwe-Qu-lxo" firstAttribute="top" secondItem="90Z-Jy-8TK" secondAttribute="bottom" constant="5" id="UT2-U4-5hh"/>
                                                 <constraint firstItem="vwe-Qu-lxo" firstAttribute="leading" secondItem="ZaS-OW-bVX" secondAttribute="leading" constant="8" id="Vn2-UO-gFa"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZLE-MD-nGO" secondAttribute="trailing" constant="8" id="Xcm-zu-sSt"/>
                                                 <constraint firstItem="ZLE-MD-nGO" firstAttribute="leading" secondItem="ZaS-OW-bVX" secondAttribute="leading" constant="8" id="gpf-lZ-giP"/>
                                                 <constraint firstAttribute="trailing" secondItem="fea-go-FWY" secondAttribute="trailing" constant="8" id="hr6-9c-wVg"/>
-                                                <constraint firstItem="fea-go-FWY" firstAttribute="top" secondItem="vwe-Qu-lxo" secondAttribute="bottom" constant="15" id="m19-FA-nAm"/>
+                                                <constraint firstItem="fea-go-FWY" firstAttribute="top" secondItem="vwe-Qu-lxo" secondAttribute="bottom" constant="20" id="m19-FA-nAm"/>
                                                 <constraint firstAttribute="bottom" secondItem="fea-go-FWY" secondAttribute="bottom" constant="20" id="mgt-Kv-CQd"/>
-                                                <constraint firstItem="90Z-Jy-8TK" firstAttribute="top" secondItem="ZLE-MD-nGO" secondAttribute="bottom" constant="28" id="uJs-8c-nzL"/>
+                                                <constraint firstItem="90Z-Jy-8TK" firstAttribute="top" secondItem="ZLE-MD-nGO" secondAttribute="bottom" constant="5" id="uJs-8c-nzL"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="166" height="275"/>
