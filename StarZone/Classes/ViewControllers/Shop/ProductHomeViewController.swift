@@ -15,17 +15,32 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var items = ["1", "2", "3", "4", "5", "6"]
     
+    var productList : [ProductItem] = [ProductItem]()
+    
+    
+    func setupSampleData(){
+        let productItem1 = ProductItem(id: "1", name: "Display", description: "Description of diplay", price: 78000.00)
+        let productItem2 = ProductItem(id: "2", name: "Mouse", description: "Description of mouse", price: 5000.00)
+        let productItem3 = ProductItem(id: "3", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
+        let productItem4 = ProductItem(id: "4", name: "Power bank", description: "Description of Power bank", price: 12000.00)
+        let productItem5 = ProductItem(id: "5", name: "Remote", description: "Description of Remote", price: 12000.00)
+        let productItem6 = ProductItem(id: "6", name: "Book", description: "Description of Book", price: 12000.00)
+        
+        productList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
+    }
+    
     
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.productList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ProductCollectionViewCell
-        cell.productNameLabel.text = "Item \(self.items[indexPath.row])"
-        cell.priceLabel.text = "Rs.2000.00"
+        let currentItem = productList[indexPath.row]
+        cell.productNameLabel.text = "\(currentItem.itemName)"
+        cell.priceLabel.text = "Rs.\(currentItem.price)"
         cell.setImage()
         return cell
     }
@@ -38,6 +53,7 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSampleData()
 
         // Do any additional setup after loading the view.
     }
