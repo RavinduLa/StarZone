@@ -13,9 +13,10 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     var menuOut = false
     
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = ["1", "2", "3", "4", "5", "6"]
+    //var items = ["1", "2", "3", "4", "5", "6"]
     
     var productList : [ProductItem] = [ProductItem]()
+    var selectedItem : ProductItem?
     
     
     func setupSampleData(){
@@ -47,7 +48,8 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected cell \(indexPath.item)")
-        //self.performSegue(withIdentifier: "gotoProductPage", sender: self)
+        self.selectedItem = self.productList[indexPath.row]
+        self.performSegue(withIdentifier: "gotoProductSingleView", sender: self)
     }
     
     
@@ -59,14 +61,20 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     }
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "gotoProductSingleView"{
+            //add the selected item for the single page here
+            let viewController = segue.destination as! ProductSinglePageViewController
+            viewController.seletedItem = self.selectedItem
+        }
     }
-    */
+    
 
 }
