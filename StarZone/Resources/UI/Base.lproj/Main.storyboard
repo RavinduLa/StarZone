@@ -470,6 +470,7 @@
                         <outlet property="btnLogin" destination="exo-SW-I03" id="4pg-b8-hti"/>
                         <segue destination="Ukv-hM-XIu" kind="show" identifier="gotoForgotPassword" id="Ad0-gl-WZL"/>
                         <segue destination="6dY-5E-TII" kind="show" identifier="gotoProductHome" id="pTN-cd-r0b"/>
+                        <segue destination="qm4-mT-BXl" kind="show" identifier="gotoTabBar" id="nvP-6V-7AM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qrw-Pf-YZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -954,6 +955,7 @@
         <scene sceneID="xwP-2F-Hln">
             <objects>
                 <tabBarController id="qm4-mT-BXl" customClass="ProductTabBarController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RT9-Rb-4a8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eEb-5U-i1q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -990,7 +992,7 @@
         <!--My Orders-->
         <scene sceneID="pKh-x3-49g">
             <objects>
-                <viewController id="dIV-zx-Caq" sceneMemberID="viewController">
+                <viewController id="dIV-zx-Caq" customClass="MyOrdersViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D4a-Bd-h7T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1006,7 +1008,7 @@
         <!--More-->
         <scene sceneID="J8H-Hs-t2H">
             <objects>
-                <viewController id="xfD-Uu-Zgg" sceneMemberID="viewController">
+                <viewController id="xfD-Uu-Zgg" customClass="MoreViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YZB-NW-wTf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1022,7 +1024,7 @@
         <!--Home-->
         <scene sceneID="TfY-to-3ct">
             <objects>
-                <viewController id="Y08-c2-dhb" sceneMemberID="viewController">
+                <viewController id="Y08-c2-dhb" customClass="TBHomeViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tAl-c1-vs2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1038,7 +1040,7 @@
         <!--Cart-->
         <scene sceneID="DD5-w0-qlN">
             <objects>
-                <viewController id="S5n-lJ-YYL" sceneMemberID="viewController">
+                <viewController id="S5n-lJ-YYL" customClass="CartViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hu4-DI-2tw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

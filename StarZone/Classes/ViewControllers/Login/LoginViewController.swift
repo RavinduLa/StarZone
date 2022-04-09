@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLoginClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "gotoProductHome", sender: self)
+        //self.performSegue(withIdentifier: "gotoProductHome", sender: self)
+        self.performSegue(withIdentifier: "gotoTabBar", sender: self)
     }
     /*
     // MARK: - Navigation
