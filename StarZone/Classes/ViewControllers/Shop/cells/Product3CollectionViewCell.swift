@@ -32,8 +32,8 @@ class Product3CollectionViewCell: UICollectionViewCell {
     
     func setImage(){
         print("Setting image")
-        let imageSize = CGSize(width: 100, height: 100)
-        var starZoneImage = UIImage(named: "StarZone Curved")
+        let imageSize = CGSize(width: 150, height: 121)
+        var starZoneImage = UIImage(named: "sample image")
         starZoneImage = starZoneImage?.imageResize(sizeChange: imageSize)
         productImageView.image = starZoneImage
     }
