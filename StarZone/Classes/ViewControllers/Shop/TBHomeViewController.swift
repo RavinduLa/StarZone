@@ -33,7 +33,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let productItem5 = ProductItem(id: "5", name: "Remote", description: "Description of Remote", price: 12000.00)
         let productItem6 = ProductItem(id: "6", name: "Book", description: "Description of Book", price: 12000.00)
         
-        let productItem7 = ProductItem(id: "7", name: "Display", description: "Description of diplay", price: 78000.00)
+        let productItem7 = ProductItem(id: "7", name: "Display J", description: "Description of diplay", price: 78000.00)
         let productItem8 = ProductItem(id: "8", name: "Mouse", description: "Description of mouse", price: 5000.00)
         let productItem9 = ProductItem(id: "9", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
         let productItem10 = ProductItem(id: "10", name: "Power bank", description: "Description of Power bank", price: 12000.00)
@@ -64,12 +64,22 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = table.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
-        cell.configure(with: featuredProductList)
+        
+        if indexPath.row == 0{
+            print("Index Path \(indexPath.row)")
+            cell.configure(with: featuredProductList)
+        }
+        else if indexPath.row == 1{
+            print("Index Path \(indexPath.row)")
+            cell.configure(with: newProductList)
+        }
+        
+        
         //self.featuredCollectionViewHeight = cell.collectionView.collectionViewLayout.collectionViewContentSize.height
         cell.frame = tableView.bounds
         cell.layoutIfNeeded()
