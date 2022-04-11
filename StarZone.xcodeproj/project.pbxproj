@@ -16,6 +16,13 @@
 		923C07FA27F9BBE90065110E /* ProductHomeViewController-prev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C07F927F9BBE90065110E /* ProductHomeViewController-prev.swift */; };
 		9254646927FAC2FF00734EAA /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254646827FAC2FF00734EAA /* ProductItem.swift */; };
 		9254646B27FAD28000734EAA /* ProductSinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254646A27FAD28000734EAA /* ProductSinglePageViewController.swift */; };
+		92673CC12803FD9F00A9234E /* TBHomeWithScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92673CC02803FD9F00A9234E /* TBHomeWithScrollingViewController.swift */; };
+		92673CC32804049B00A9234E /* FeaturedProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92673CC22804049B00A9234E /* FeaturedProductsCollectionViewCell.swift */; };
+		92673CC5280404AE00A9234E /* NewProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92673CC4280404AE00A9234E /* NewProductsCollectionViewCell.swift */; };
+		9275680928037A3E008C9823 /* Product3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275680728037A3E008C9823 /* Product3CollectionViewCell.swift */; };
+		9275680A28037A3E008C9823 /* Product3CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9275680828037A3E008C9823 /* Product3CollectionViewCell.xib */; };
+		9275680D28037C7B008C9823 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275680B28037C7B008C9823 /* ProductTableViewCell.swift */; };
+		9275680E28037C7B008C9823 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9275680C28037C7B008C9823 /* ProductTableViewCell.xib */; };
 		928866AA280216B300AF60C8 /* ProductTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928866A9280216B300AF60C8 /* ProductTabBarController.swift */; };
 		928866AC280216F700AF60C8 /* TBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928866AB280216F700AF60C8 /* TBHomeViewController.swift */; };
 		928866AE2802170700AF60C8 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928866AD2802170700AF60C8 /* MyOrdersViewController.swift */; };
@@ -66,6 +73,13 @@
 		923C07F927F9BBE90065110E /* ProductHomeViewController-prev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductHomeViewController-prev.swift"; sourceTree = "<group>"; };
 		9254646827FAC2FF00734EAA /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 		9254646A27FAD28000734EAA /* ProductSinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSinglePageViewController.swift; sourceTree = "<group>"; };
+		92673CC02803FD9F00A9234E /* TBHomeWithScrollingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBHomeWithScrollingViewController.swift; sourceTree = "<group>"; };
+		92673CC22804049B00A9234E /* FeaturedProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		92673CC4280404AE00A9234E /* NewProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9275680728037A3E008C9823 /* Product3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product3CollectionViewCell.swift; sourceTree = "<group>"; };
+		9275680828037A3E008C9823 /* Product3CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Product3CollectionViewCell.xib; sourceTree = "<group>"; };
+		9275680B28037C7B008C9823 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		9275680C28037C7B008C9823 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		928866A9280216B300AF60C8 /* ProductTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTabBarController.swift; sourceTree = "<group>"; };
 		928866AB280216F700AF60C8 /* TBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBHomeViewController.swift; sourceTree = "<group>"; };
 		928866AD2802170700AF60C8 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +144,7 @@
 		923B82CC27F8C57E00EBF9D8 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				927567FB28036407008C9823 /* cells */,
 				923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */,
 				923B82CF27F8C5AB00EBF9D8 /* AllProdctsViewController.swift */,
 				923B82D327F8D67300EBF9D8 /* ProductHomeViewController.swift */,
@@ -141,8 +156,22 @@
 				928866AD2802170700AF60C8 /* MyOrdersViewController.swift */,
 				928866AF2802171600AF60C8 /* CartViewController.swift */,
 				928866B12802172200AF60C8 /* MoreViewController.swift */,
+				92673CC02803FD9F00A9234E /* TBHomeWithScrollingViewController.swift */,
 			);
 			path = Shop;
+			sourceTree = "<group>";
+		};
+		927567FB28036407008C9823 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				9275680728037A3E008C9823 /* Product3CollectionViewCell.swift */,
+				9275680828037A3E008C9823 /* Product3CollectionViewCell.xib */,
+				9275680B28037C7B008C9823 /* ProductTableViewCell.swift */,
+				9275680C28037C7B008C9823 /* ProductTableViewCell.xib */,
+				92673CC22804049B00A9234E /* FeaturedProductsCollectionViewCell.swift */,
+				92673CC4280404AE00A9234E /* NewProductsCollectionViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		928B0C1427F6366300DA5032 = {
@@ -416,6 +445,8 @@
 			files = (
 				928B0C3027F6366400DA5032 /* LaunchScreen.storyboard in Resources */,
 				928B0C2D27F6366400DA5032 /* Assets.xcassets in Resources */,
+				9275680E28037C7B008C9823 /* ProductTableViewCell.xib in Resources */,
+				9275680A28037A3E008C9823 /* Product3CollectionViewCell.xib in Resources */,
 				928B0C2827F6366300DA5032 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,10 +477,14 @@
 				928866AA280216B300AF60C8 /* ProductTabBarController.swift in Sources */,
 				928B0C2527F6366300DA5032 /* ViewController.swift in Sources */,
 				923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */,
+				92673CC12803FD9F00A9234E /* TBHomeWithScrollingViewController.swift in Sources */,
 				923B82D427F8D67300EBF9D8 /* ProductHomeViewController.swift in Sources */,
+				92673CC5280404AE00A9234E /* NewProductsCollectionViewCell.swift in Sources */,
 				923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */,
 				923B82CE27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift in Sources */,
 				928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */,
+				92673CC32804049B00A9234E /* FeaturedProductsCollectionViewCell.swift in Sources */,
+				9275680928037A3E008C9823 /* Product3CollectionViewCell.swift in Sources */,
 				928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */,
 				928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */,
 				923B82D027F8C5AB00EBF9D8 /* AllProdctsViewController.swift in Sources */,
@@ -460,6 +495,7 @@
 				928866AC280216F700AF60C8 /* TBHomeViewController.swift in Sources */,
 				923C07FA27F9BBE90065110E /* ProductHomeViewController-prev.swift in Sources */,
 				9254646B27FAD28000734EAA /* ProductSinglePageViewController.swift in Sources */,
+				9275680D28037C7B008C9823 /* ProductTableViewCell.swift in Sources */,
 				928B0C6327F6462300DA5032 /* LandingViewController.swift in Sources */,
 				923C07F827F9B5710065110E /* ProductCollectionViewCell.swift in Sources */,
 				928866B22802172200AF60C8 /* MoreViewController.swift in Sources */,

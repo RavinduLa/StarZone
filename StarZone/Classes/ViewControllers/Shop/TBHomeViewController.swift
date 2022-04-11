@@ -7,13 +7,91 @@
 
 import UIKit
 
-class TBHomeViewController: UIViewController {
+class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    @IBOutlet weak var table  : UITableView!
+    
+    let reuseIdentifierFeatured = "featuredCell"
+    let reuseIdentifierNew = "newCell"
+    // also enter this string as the cell identifier in the storyboard
+    //var items = ["1", "2", "3", "4", "5", "6"]
+    
+    
+    
+    var featuredProductList : [ProductItem] = [ProductItem]()
+    var newProductList : [ProductItem] = [ProductItem]()
+    var selectedItem : ProductItem?
+    
+    func setupSampleData(){
+        let productItem1 = ProductItem(id: "1", name: "Display", description: "Description of diplay", price: 78000.00)
+        let productItem2 = ProductItem(id: "2", name: "Mouse", description: "Description of mouse", price: 5000.00)
+        let productItem3 = ProductItem(id: "3", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
+        let productItem4 = ProductItem(id: "4", name: "Power bank", description: "Description of Power bank", price: 12000.00)
+        let productItem5 = ProductItem(id: "5", name: "Remote", description: "Description of Remote", price: 12000.00)
+        let productItem6 = ProductItem(id: "6", name: "Book", description: "Description of Book", price: 12000.00)
+        
+        let productItem7 = ProductItem(id: "7", name: "Display", description: "Description of diplay", price: 78000.00)
+        let productItem8 = ProductItem(id: "8", name: "Mouse", description: "Description of mouse", price: 5000.00)
+        let productItem9 = ProductItem(id: "9", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
+        let productItem10 = ProductItem(id: "10", name: "Power bank", description: "Description of Power bank", price: 12000.00)
+        let productItem11 = ProductItem(id: "11", name: "Remote", description: "Description of Remote", price: 12000.00)
+        let productItem12 = ProductItem(id: "12", name: "Book", description: "Description of Book", price: 12000.00)
+        
+        featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
+        newProductList.append(contentsOf: [productItem7,productItem8,productItem9,productItem10, productItem11, productItem12])
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
+        
+        table.register(ProductTableViewCell.nib(), forCellReuseIdentifier: ProductTableViewCell.identifier)
+        table.delegate = self
+        table.dataSource = self
+        table.reloadData()
+        setupSampleData()
+        
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = table.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
+        cell.configure(with: featuredProductList)
+        return cell
+    }
+    
+    /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell 	as? ProductTableViewCell{
+            cell.collectionView.tag = indexPath.section
+            cell.collectionView.reloadData()
+        }
+    }*/
+    
+    
+    
+    
+    //setup new products collection
+    /*func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.newProductList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierNew, for: indexPath as IndexPath) as! ProductCollectionViewCell
+        let currentItem = newProductList[indexPath.row]
+        cell.productNameLabel.text = "\(currentItem.itemName)"
+        cell.priceLabel.text = "Rs.\(currentItem.price)"
+        cell.setImage()
+        return cell
+    }*/
+    
     
 
     /*

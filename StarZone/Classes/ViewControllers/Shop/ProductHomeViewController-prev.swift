@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductHomeViewController_prev: UIViewController  , UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+class ProductHomeViewController_prev: UIViewController  , UICollectionViewDataSource, UICollectionViewDelegate{
 
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var productsViewLeading: NSLayoutConstraint!
