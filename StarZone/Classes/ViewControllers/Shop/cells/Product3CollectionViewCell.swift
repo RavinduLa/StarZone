@@ -24,6 +24,7 @@ class Product3CollectionViewCell: UICollectionViewCell {
     
     public func configure(with product : ProductItem){
         print("Configuring collection view")
+        print("Product Name : \(product.itemName)")
         self.productName.text = product.itemName
         self.price.text = String(product.price)
         setImage()

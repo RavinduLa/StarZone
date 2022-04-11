@@ -52,7 +52,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnViewAll" destination="Msy-sW-lpM" id="PdA-0H-uCp"/>
                 <outlet property="collectionView" destination="5ld-Lh-Q5U" id="6be-Jf-BZS"/>
+                <outlet property="lblSectionHeader" destination="aG2-oS-rrz" id="BeD-Tf-d5h"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="138.95089285714286"/>
         </tableViewCell>

@@ -52,6 +52,8 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table.register(ProductTableViewCell.nib(), forCellReuseIdentifier: ProductTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
+        //table.rowHeight = UITableView.automaticDimension
+        //table.estimatedRowHeight = 600
         table.reloadData()
         setupSampleData()
         
@@ -66,6 +68,10 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell  = table.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
         cell.configure(with: featuredProductList)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 700.00
     }
     
     /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

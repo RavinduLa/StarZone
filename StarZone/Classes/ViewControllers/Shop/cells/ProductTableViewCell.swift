@@ -14,6 +14,8 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var collectionView : UICollectionView!
     
+    @IBOutlet weak var lblSectionHeader: UILabel!
+    @IBOutlet weak var btnViewAll: UIButton!
     //var featuredProductList : [ProductItem] = [ProductItem]()
     //var newProductList : [ProductItem] = [ProductItem]()
     
@@ -32,6 +34,7 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         collectionView.register(Product3CollectionViewCell.nib(), forCellWithReuseIdentifier: Product3CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         collectionView.reloadData()
     }
 
@@ -56,6 +59,7 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     }
     
     public func configure(with products : [ProductItem]){
+        print("Configuring table view")
         self.productList = products
         collectionView.reloadData()
     }
