@@ -13,6 +13,7 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
 
     
     @IBOutlet weak var collectionView : UICollectionView!
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var lblSectionHeader: UILabel!
     @IBOutlet weak var btnViewAll: UIButton!

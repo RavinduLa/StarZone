@@ -31,6 +31,9 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5ld-Lh-Q5U">
                         <rect key="frame" x="0.0" y="34" width="320" height="97"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="97" id="xY8-wP-Bgx"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gZX-xx-Cy9">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -54,6 +57,7 @@
             <connections>
                 <outlet property="btnViewAll" destination="Msy-sW-lpM" id="PdA-0H-uCp"/>
                 <outlet property="collectionView" destination="5ld-Lh-Q5U" id="6be-Jf-BZS"/>
+                <outlet property="collectionViewHeight" destination="xY8-wP-Bgx" id="RGX-gU-L8j"/>
                 <outlet property="lblSectionHeader" destination="aG2-oS-rrz" id="BeD-Tf-d5h"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="138.95089285714286"/>

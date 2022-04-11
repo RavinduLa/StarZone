@@ -23,6 +23,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var featuredProductList : [ProductItem] = [ProductItem]()
     var newProductList : [ProductItem] = [ProductItem]()
     var selectedItem : ProductItem?
+    var featuredCollectionViewHeight : CGFloat?
     
     func setupSampleData(){
         let productItem1 = ProductItem(id: "1", name: "Display", description: "Description of diplay", price: 78000.00)
@@ -39,7 +40,9 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let productItem11 = ProductItem(id: "11", name: "Remote", description: "Description of Remote", price: 12000.00)
         let productItem12 = ProductItem(id: "12", name: "Book", description: "Description of Book", price: 12000.00)
         
-        featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
+        let productItem13 = ProductItem(id: "13", name: "Banana Flower", description: "Banana Flower Description", price: 12000.00)
+        
+        featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6, productItem13])
         newProductList.append(contentsOf: [productItem7,productItem8,productItem9,productItem10, productItem11, productItem12])
     }
 
@@ -67,12 +70,23 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = table.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
         cell.configure(with: featuredProductList)
+        //self.featuredCollectionViewHeight = cell.collectionView.collectionViewLayout.collectionViewContentSize.height
+        cell.frame = tableView.bounds
+        cell.layoutIfNeeded()
+        cell.collectionView.reloadData()
+        cell.collectionViewHeight.constant = cell.collectionView.collectionViewLayout.collectionViewContentSize.height
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 700.00
-    }
+    
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cell = tableView.cellForRow(at: indexPath) as! ProductTableViewCell
+        //print("Collection view height : \(self.featuredCollectionViewHeight)")
+        return 1000.00
+    }*/
+    
+    
     
     /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell 	as? ProductTableViewCell{
