@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ProductCollectionViewCellDelegate{
+    
+    
     
     
 
@@ -21,6 +23,8 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     //var newProductList : [ProductItem] = [ProductItem]()
     
     var productList : [ProductItem] = [ProductItem]()
+    var currentItem : ProductItem?
+    weak var delegate : TableViewItemSelectedDelegate?
     
     
     static let identifier = "ProductTableViewCell"
@@ -52,6 +56,10 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Product3CollectionViewCell.identifier, for: indexPath) as! Product3CollectionViewCell
         cell.configure(with: productList[indexPath.row])
+        cell.delegate = self
+        //set the current item
+        self.currentItem = productList[indexPath.row]
+        
         return cell
     }
     
@@ -59,10 +67,23 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         return CGSize(width: 166, height: 275)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
+    
     public func configure(with products : [ProductItem]){
         print("Configuring table view")
         self.productList = products
         collectionView.reloadData()
+    }
+    
+    func collectionViewCell(_ cell: UICollectionViewCell, buttonTapped: UIButton) {
+        let indexPath = self.collectionView.indexPath(for: cell)
+        self.delegate?.tableViewCollectionItemSelected(productList[indexPath!.row])
     }
     
 }

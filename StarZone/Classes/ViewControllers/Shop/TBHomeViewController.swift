@@ -7,9 +7,7 @@
 
 import UIKit
 
-class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
+class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewItemSelectedDelegate {
     
     @IBOutlet weak var table  : UITableView!
     
@@ -24,6 +22,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var newProductList : [ProductItem] = [ProductItem]()
     var selectedItem : ProductItem?
     var featuredCollectionViewHeight : CGFloat?
+    var currentTableCell : ProductTableViewCell?
     
     func setupSampleData(){
         let productItem1 = ProductItem(id: "1", name: "Display", description: "Description of diplay", price: 78000.00)
@@ -72,17 +71,25 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if indexPath.row == 0{
             print("Index Path \(indexPath.row)")
+            //set the currently going table cell
+            self.currentTableCell = cell
             cell.configure(with: featuredProductList)
             cell.lblSectionHeader.text = "Featured Products"
         }
         else if indexPath.row == 1{
             print("Index Path \(indexPath.row)")
+            //set the currently going table cell
+            self.currentTableCell = cell
             cell.configure(with: newProductList)
             cell.lblSectionHeader.text = "New Products"
         }
         
-        
         //self.featuredCollectionViewHeight = cell.collectionView.collectionViewLayout.collectionViewContentSize.height
+        
+        //setting the delegate from table view
+        cell.delegate = self
+        
+        
         cell.frame = tableView.bounds
         cell.layoutIfNeeded()
         cell.collectionView.reloadData()
@@ -90,6 +97,13 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell
     }
+    
+    
+    func tableViewCollectionItemSelected(_ product: ProductItem) {
+        self.selectedItem = product
+        performSegue(withIdentifier: "gotoProductSingleView", sender: nil)
+    }
+    
     
     
     /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -126,14 +140,28 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "gotoProductSingleView"{
+            //add the selected item for the single page here
+            let viewController = segue.destination as! ProductSinglePageViewController
+            viewController.seletedItem = self.selectedItem
+        }
     }
-    */
+    
 
+}
+
+protocol ProductCollectionViewCellDelegate: AnyObject{
+    func collectionViewCell(_ cell: UICollectionViewCell, buttonTapped : UIButton)
+}
+
+protocol TableViewItemSelectedDelegate: AnyObject{
+    func tableViewCollectionItemSelected(_ product: ProductItem)
 }

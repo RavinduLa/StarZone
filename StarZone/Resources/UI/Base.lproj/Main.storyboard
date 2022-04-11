@@ -567,9 +567,6 @@
                     <navigationItem key="navigationItem" id="zsD-LL-N0L">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="fqT-mr-dto"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="uoA-xA-f71" kind="presentation" identifier="gotoProductSingleView" id="zkE-Ak-PfF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePb-aj-Ugc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -695,7 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZy-QD-kUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586.9565217391305" y="140.625"/>
+            <point key="canvasLocation" x="12" y="2593"/>
         </scene>
         <!--Sign In Nav View Controller-->
         <scene sceneID="KbJ-Oj-SJh">
@@ -1255,7 +1252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdG-cy-Wp1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337.68115942028987" y="2582.8125"/>
+            <point key="canvasLocation" x="-1483" y="3061"/>
         </scene>
         <!--Home-->
         <scene sceneID="TfY-to-3ct">
@@ -1282,6 +1279,7 @@
                     <navigationItem key="navigationItem" title="Home" id="RyF-GP-Ak9"/>
                     <connections>
                         <outlet property="table" destination="Yg4-nP-sqH" id="sPe-yc-ps2"/>
+                        <segue destination="uoA-xA-f71" kind="presentation" identifier="gotoProductSingleView" id="dyq-8w-cEj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L98-po-QCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

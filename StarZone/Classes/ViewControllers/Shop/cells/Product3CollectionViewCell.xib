@@ -60,6 +60,7 @@
             </constraints>
             <size key="customSize" width="153" height="180"/>
             <connections>
+                <outlet property="btnAddToCart" destination="zH1-pi-1Xb" id="Tel-Qd-Zf8"/>
                 <outlet property="price" destination="pJX-VA-bfW" id="ei0-DY-oet"/>
                 <outlet property="productImageView" destination="M4l-qA-UTr" id="uh7-LA-51i"/>
                 <outlet property="productName" destination="As7-CB-dpi" id="WDa-au-8og"/>
