@@ -73,10 +73,12 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if indexPath.row == 0{
             print("Index Path \(indexPath.row)")
             cell.configure(with: featuredProductList)
+            cell.lblSectionHeader.text = "Featured Products"
         }
         else if indexPath.row == 1{
             print("Index Path \(indexPath.row)")
             cell.configure(with: newProductList)
+            cell.lblSectionHeader.text = "New Products"
         }
         
         
