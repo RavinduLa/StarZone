@@ -16,17 +16,19 @@ class ProductSinglePageViewController: UIViewController {
     @IBOutlet weak var txtDescription: UITextView!
     
     
-    var seletedItem : ProductItem?
+    weak var seletedItem : ProductItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let strPrice = String(format: "%.2f", self.seletedItem?.price as! CVarArg)
+        //let strPrice = String(format: "%.2f", self.seletedItem?.price as! CVarArg)
+        let cvArgPrice = self.seletedItem?.price  as! CVarArg
         
         self.txtCode.text = self.seletedItem?.itemId
         self.txtProdcutName.text = self.seletedItem?.itemName
         self.txtDescription.text = self.seletedItem?.itemDescription
-        self.txtPrice.text = "Rs.\(strPrice)"
+        self.txtPrice.text = "Rs.\(String(format : "%.2f",cvArgPrice))"
+        
         
         setImage()
 
@@ -34,13 +36,22 @@ class ProductSinglePageViewController: UIViewController {
     }
     
     func setImage(){
-        let imageSize = CGSize(width: 300, height: 300)
-        var starZoneImage = UIImage(named: "StarZone Curved")
-        starZoneImage = starZoneImage?.imageResize(sizeChange: imageSize)
-        imgProduct.image = starZoneImage
+        
+        //if the image is resized the memory consumption increases. Possible memory leak.
+        
+        let path = Bundle.main.path(forResource: "sample-image", ofType: "jpg")
+        let starZoneImage = UIImage(contentsOfFile: path!)!
+        //let starZoneImage = UIImage(named: "StarZone Curved")!
+        self.imgProduct.image = starZoneImage
     }
     
-
+    /*override func viewWillDisappear(_ animated: Bool) {
+        print("Popping product single view page")
+        
+        navigationController?.popViewController(animated: true)
+        print("Popped product single view page")
+    }*/
+    
     /*
     // MARK: - Navigation
 
