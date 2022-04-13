@@ -42,10 +42,12 @@ class CartTableViewCell: UITableViewCell {
     
     func updateQuantity(){
         lblItemQuantity.text = "\(currentItem!.count)"
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "updateCartItem"), object: nil, userInfo: ["editedCartItem": currentItem!])
+        
     }
     
     func updatePrice(){
-        lblItemPrice.text = "\(currentItem!.cartItemPrice)"
+        lblItemPrice.text = "Rs. \(String(format : "%.2f", currentItem!.cartItemPrice) )"
     }
 
 }

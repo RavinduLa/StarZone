@@ -26,7 +26,7 @@ class Product3CollectionViewCell: UICollectionViewCell {
     public func configure(with product : ProductItem){
         self.product = product
         self.productName.text = product.itemName
-        self.price.text = String(product.price)
+        self.price.text = "Rs. \(String(format : "%.2f",product.price))"
         setImage()
     }
     

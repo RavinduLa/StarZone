@@ -35,7 +35,7 @@ class ProductSinglePageViewController: UIViewController {
         self.txtCode.text = self.seletedItem?.itemId
         self.txtProdcutName.text = self.seletedItem?.itemName
         self.txtDescription.text = self.seletedItem?.itemDescription
-        self.txtPrice.text = "Rs.\(String(format : "%.2f",cvArgPrice))"
+        self.txtPrice.text = "Rs. \(String(format : "%.2f",cvArgPrice))"
         updateCount()
         
         

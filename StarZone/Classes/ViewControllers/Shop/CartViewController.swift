@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    
 
     @IBOutlet weak var lblTotalAmount: UILabel!
     @IBOutlet weak var lblTotalPrice: UILabel!
@@ -31,11 +33,13 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.tableFooterView = UIView.init()
         tableView.reloadData()
+        updateTotalPrice()
     }
     
     //reload the data of table view to get any newly added cart items
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+        updateTotalPrice()
     }
     
     func addItemToCart(item: ProductItem, count: Int) {
@@ -58,7 +62,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartTableCell") as! CartTableViewCell
         let currentItem = cartItemList[indexPath.row]
         cell.lblItemName.text = "\(currentItem.productItem.itemName)"
-        cell.lblItemPrice.text = "\(currentItem.cartItemPrice)"
+        cell.lblItemPrice.text = "Rs. \(String(format : "%.2f", currentItem.cartItemPrice))"
         cell.lblItemQuantity.text = "\(currentItem.count)"
         cell.currentItem = currentItem
         return cell
@@ -67,6 +71,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     //observer to receive new cart items from tabbar controller
     func setupNotificationObserver(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.addCartItemByNotification(notification:)), name: Notification.Name(rawValue: "addNewCartItem"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateCartItemByNotification(notification:)), name: Notification.Name(rawValue: "updateCartItem"), object: nil)
     }
     
     //once a new item is received via notification center add it to cart item list.
@@ -77,6 +82,23 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.cartItemList.append(newCartItem)
 
         }
+    }
+    
+    @objc func updateCartItemByNotification(notification : Notification){
+        if let userInfo = notification.userInfo{
+            let updatedCartItem = userInfo["editedCartItem"] as! CartItem
+            self.cartItemList.first(where: {$0 == updatedCartItem})?.count = updatedCartItem.count
+            updateTotalPrice()
+        }
+    }
+    
+    func updateTotalPrice(){
+        
+        var total : Double = 0.0
+        for item in cartItemList{
+            total = total + item.cartItemPrice
+        }
+        lblTotalPrice.text = "Rs. \(String(format : "%.2f", total))" 
     }
     
     
@@ -92,4 +114,3 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
 
 }
-
