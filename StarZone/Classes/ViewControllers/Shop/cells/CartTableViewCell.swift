@@ -13,7 +13,8 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var lblItemPrice : UILabel!
     @IBOutlet weak var lblItemQuantity : UILabel!
     
-    var itemQuantity : Int = 1
+    //var itemQuantity : Int = 1
+    var currentItem : CartItem?
     
 
     override func awakeFromNib() {
@@ -28,11 +29,23 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @IBAction func plusButtonClicked(){
-        
+        currentItem?.count = currentItem!.count + 1
+        updateQuantity()
+        updatePrice()
     }
     
     @IBAction func minusButtonClicked(){
-        
+        currentItem?.count = currentItem!.count - 1
+        updateQuantity()
+        updatePrice()
+    }
+    
+    func updateQuantity(){
+        lblItemQuantity.text = "\(currentItem!.count)"
+    }
+    
+    func updatePrice(){
+        lblItemPrice.text = "\(currentItem!.cartItemPrice)"
     }
 
 }

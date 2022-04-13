@@ -60,6 +60,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.lblItemName.text = "\(currentItem.productItem.itemName)"
         cell.lblItemPrice.text = "\(currentItem.cartItemPrice)"
         cell.lblItemQuantity.text = "\(currentItem.count)"
+        cell.currentItem = currentItem
         return cell
     }
     

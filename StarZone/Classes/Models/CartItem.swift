@@ -10,7 +10,13 @@ import UIKit
 
 class CartItem : NSObject{
     var productItem : ProductItem
-    var count : Int
+    var count : Int = 1{
+        didSet{
+            if count <= 0{
+                count = 1
+            }
+        }
+    }
     var cartItemPrice : Double {
         get{
             return self.productItem.price * Double(count)
