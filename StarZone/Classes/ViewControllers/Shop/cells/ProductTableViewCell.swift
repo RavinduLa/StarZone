@@ -49,6 +49,17 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         // Configure the view for the selected state
     }
     
+    @IBAction func btnViewAllClick(){
+        
+        if self.lblSectionHeader.text == "Featured Products"{
+            //navigate to all featured products
+        }
+        else if self.lblSectionHeader.text == "New Products"{
+            //navigate to all new products
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productList.count
     }
