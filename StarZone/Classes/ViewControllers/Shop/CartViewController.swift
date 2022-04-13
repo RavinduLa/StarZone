@@ -68,6 +68,40 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            //delete item here
+            self.deleteItem(itemIndex: indexPath.row)
+        }
+        
+        return [delete]
+    }
+    
+    func deleteItem(itemIndex : Int){
+        //create the alert for deletion
+        let deleteAlert = UIAlertController(title: "Delete Item?", message: "Are you sure you want to delete this item ?", preferredStyle: UIAlertController.Style.alert)
+        deleteAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {(action : UIAlertAction) in
+            print("Handle delete logic here..")
+            self.cartItemList.remove(at: itemIndex)
+            self.tableView.reloadData()
+            self.updateTotalPrice()
+            
+        }
+                                           )
+        )
+        
+        //add cancel button
+        //cancel style makes text bold
+        deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action: UIAlertAction) in print("Handle cancel alert here")}))
+        
+        //present the alert
+        present(deleteAlert, animated: true, completion: nil)
+    }
+    
     //observer to receive new cart items from tabbar controller
     func setupNotificationObserver(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.addCartItemByNotification(notification:)), name: Notification.Name(rawValue: "addNewCartItem"), object: nil)
