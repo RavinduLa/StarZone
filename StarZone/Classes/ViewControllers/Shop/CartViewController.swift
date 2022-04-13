@@ -85,7 +85,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         //create the alert for deletion
         let deleteAlert = UIAlertController(title: "Delete Item?", message: "Are you sure you want to delete this item ?", preferredStyle: UIAlertController.Style.alert)
         deleteAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {(action : UIAlertAction) in
-            print("Handle delete logic here..")
             self.cartItemList.remove(at: itemIndex)
             self.tableView.reloadData()
             self.updateTotalPrice()

@@ -83,7 +83,18 @@ class ProductSinglePageViewController: UIViewController {
         //Notification center posts the new cart item to ProductTabBarController
         NotificationCenter.default.post(name: Notification.Name(rawValue: "sendCartItemtoTabBarController"), object: nil, userInfo: ["itemObject": newCartItem])
         
-        print("Sent notification from single view")
+        showItemAddedAlert()
+    }
+    
+    func showItemAddedAlert(){
+        let addedAlert = UIAlertController(title: "Item Added", message: "Your item has been added to cart", preferredStyle: UIAlertController.Style.alert)
+        
+        addedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(addedAlert, animated: true, completion: nil)
+    }
+    
+    func popSingleView(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     
