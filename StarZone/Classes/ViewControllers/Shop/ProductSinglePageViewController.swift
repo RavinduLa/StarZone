@@ -14,14 +14,22 @@ class ProductSinglePageViewController: UIViewController {
     @IBOutlet weak var txtProdcutName: UILabel!
     @IBOutlet weak var txtPrice: UILabel!
     @IBOutlet weak var txtDescription: UITextView!
+    @IBOutlet weak var lblItemCount: UILabel!
     
     
     weak var seletedItem : ProductItem?
+    var count : Int = 1{
+        //stop decrementing count below 1
+        didSet{
+            if count <= 0{
+                count = 1
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let strPrice = String(format: "%.2f", self.seletedItem?.price as! CVarArg)
         let cvArgPrice = self.seletedItem?.price  as! CVarArg
         
         self.txtCode.text = self.seletedItem?.itemId
@@ -44,6 +52,31 @@ class ProductSinglePageViewController: UIViewController {
         //let starZoneImage = UIImage(named: "StarZone Curved")!
         self.imgProduct.image = starZoneImage
     }
+    
+    @IBAction func decrementButtonClick(_ sender: Any) {
+        count = count - 1
+    }
+    
+    @IBAction func incrementButtonClick(_ sender: Any) {
+        count = count + 1
+    }
+    
+    @IBAction func addToCartButtonClick(_ sender: Any) {
+        //using notification center to add the current item with count to cart
+        let addingItem = self.seletedItem
+        
+        guard let addingItem = addingItem else {
+            return
+        }
+        
+        let newCartItem = CartItem(product: addingItem, count: count)
+        
+        //Notification center posts the new cart item to ProductTabBarController
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "sendCartItemtoTabBarController"), object: nil, userInfo: ["itemObject": newCartItem])
+        
+        print("Sent notification from single view")
+    }
+    
     
     /*override func viewWillDisappear(_ animated: Bool) {
         print("Popping product single view page")
