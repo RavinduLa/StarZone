@@ -36,6 +36,7 @@ class ProductSinglePageViewController: UIViewController {
         self.txtProdcutName.text = self.seletedItem?.itemName
         self.txtDescription.text = self.seletedItem?.itemDescription
         self.txtPrice.text = "Rs.\(String(format : "%.2f",cvArgPrice))"
+        updateCount()
         
         
         setImage()
@@ -54,11 +55,19 @@ class ProductSinglePageViewController: UIViewController {
     }
     
     @IBAction func decrementButtonClick(_ sender: Any) {
+        print("Decrement button clicked")
         count = count - 1
+        updateCount()
     }
     
     @IBAction func incrementButtonClick(_ sender: Any) {
+        print("Increment button clicked")
         count = count + 1
+        updateCount()
+    }
+    
+    func updateCount(){
+        self.lblItemCount.text = "\(count)"
     }
     
     @IBAction func addToCartButtonClick(_ sender: Any) {
