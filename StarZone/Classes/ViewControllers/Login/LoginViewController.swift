@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var btnForgotPassword: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ class LoginViewController: UIViewController {
         self.performSegue(withIdentifier: "gotoForgotPassword", sender: self)
     }
     
+    @IBAction func btnLoginClick(_ sender: Any) {
+        //self.performSegue(withIdentifier: "gotoProductHome", sender: self)
+        self.performSegue(withIdentifier: "gotoTabBar", sender: self)
+    }
     /*
     // MARK: - Navigation
 
