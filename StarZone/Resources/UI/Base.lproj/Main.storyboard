@@ -1003,14 +1003,26 @@
                     <view key="view" contentMode="scaleToFill" id="D4a-Bd-h7T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2I-pN-uvP">
+                                <rect key="frame" x="114" y="429" width="186.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6DW-xc-uI9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e2I-pN-uvP" firstAttribute="centerY" secondItem="D4a-Bd-h7T" secondAttribute="centerY" id="jp0-rb-t6o"/>
+                            <constraint firstItem="e2I-pN-uvP" firstAttribute="centerX" secondItem="D4a-Bd-h7T" secondAttribute="centerX" id="zvr-ZP-t7C"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Orders" id="TpX-dB-Xlf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uW-jU-zgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="2593"/>
+            <point key="canvasLocation" x="2053.6231884057975" y="2592.8571428571427"/>
         </scene>
         <!--More-->
         <scene sceneID="J8H-Hs-t2H">
@@ -1079,7 +1091,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5jx-2L-ac6">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="featuredProductCollectionViewCell" id="5jx-2L-ac6" customClass="FeaturedProductsCollectionViewCell" customModule="StarZone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="275"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1YF-H7-a3i">
@@ -1108,6 +1120,9 @@
                                                     <rect key="frame" x="8" y="201" width="150" height="54"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Add to cart"/>
+                                                    <connections>
+                                                        <action selector="addToCartButonClick" destination="5jx-2L-ac6" eventType="touchUpInside" id="sJq-Lf-5iK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1126,10 +1141,10 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="166" height="275"/>
                                         <connections>
-                                            <outlet property="btnAddToCart" destination="W5i-Z1-SCp" id="Vvb-OC-WMf"/>
-                                            <outlet property="priceLabel" destination="V3v-kJ-6cD" id="6L3-Ql-SVz"/>
-                                            <outlet property="productImageView" destination="cfK-fy-FHy" id="agT-5q-wWl"/>
-                                            <outlet property="productNameLabel" destination="exK-c5-jbh" id="GJH-mW-cvs"/>
+                                            <outlet property="btnAddToCart" destination="W5i-Z1-SCp" id="rwT-6N-Vrb"/>
+                                            <outlet property="image" destination="cfK-fy-FHy" id="IbF-Cr-fsX"/>
+                                            <outlet property="lblPrice" destination="V3v-kJ-6cD" id="NDy-NL-3Wj"/>
+                                            <outlet property="lblProductName" destination="exK-c5-jbh" id="3rY-Gd-Hwi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

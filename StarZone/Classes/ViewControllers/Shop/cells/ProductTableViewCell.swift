@@ -25,6 +25,7 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     var productList : [ProductItem] = [ProductItem]()
     var currentItem : ProductItem?
     weak var delegate : TableViewItemSelectedDelegate?
+    weak var viewAllDelegate : ViewAllProductsDelegate?
     
     
     static let identifier = "ProductTableViewCell"
@@ -53,11 +54,20 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         
         if self.lblSectionHeader.text == "Featured Products"{
             //navigate to all featured products
+            moveToViewAllFeatured()
+            
         }
         else if self.lblSectionHeader.text == "New Products"{
             //navigate to all new products
+            print("")
         }
         
+    }
+    
+    func moveToViewAllFeatured(){
+        self.viewAllDelegate?.navigateToViewAll("featured")
+        print("View all delegate : \(viewAllDelegate)")
+        print("navigate to view all featured delagate sent")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

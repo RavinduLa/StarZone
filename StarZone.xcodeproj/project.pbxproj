@@ -45,6 +45,7 @@
 		928F5A7E2806B590005E65BE /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F5A7D2806B590005E65BE /* CartItem.swift */; };
 		928F5A832806BD11005E65BE /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F5A822806BD11005E65BE /* CartTableViewCell.swift */; };
 		928F5A8728076412005E65BE /* AllFeaturedProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F5A8628076412005E65BE /* AllFeaturedProductsViewController.swift */; };
+		928F5A89280765B5005E65BE /* FeaturedProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F5A88280765B5005E65BE /* FeaturedProductsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		928F5A7D2806B590005E65BE /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		928F5A822806BD11005E65BE /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		928F5A8628076412005E65BE /* AllFeaturedProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFeaturedProductsViewController.swift; sourceTree = "<group>"; };
+		928F5A88280765B5005E65BE /* FeaturedProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				9275680B28037C7B008C9823 /* ProductTableViewCell.swift */,
 				9275680C28037C7B008C9823 /* ProductTableViewCell.xib */,
 				928F5A822806BD11005E65BE /* CartTableViewCell.swift */,
+				928F5A88280765B5005E65BE /* FeaturedProductsCollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				928B0C2127F6366300DA5032 /* AppDelegate.swift in Sources */,
 				928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */,
 				923B82D027F8C5AB00EBF9D8 /* AllProdctsViewController.swift in Sources */,
+				928F5A89280765B5005E65BE /* FeaturedProductsCollectionViewCell.swift in Sources */,
 				928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */,
 				928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */,
 				928866B02802171600AF60C8 /* CartViewController.swift in Sources */,

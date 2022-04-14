@@ -2,25 +2,25 @@
 //  FeaturedProductsCollectionViewCell.swift
 //  StarZone
 //
-//  Created by Ravindu Wataketiya on 2022-04-11.
+//  Created by Ravindu Wataketiya on 2022-04-14.
 //
 
 import UIKit
 
 class FeaturedProductsCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "FeaturedProductsCollectionViewCell"
-    
-    @IBOutlet weak var productNameLabel : UILabel!
-    @IBOutlet weak var priceLabel : UILabel!
-    @IBOutlet weak var productImageView : UIImageView!
+    @IBOutlet weak var lblProductName : UILabel!
+    @IBOutlet weak var lblPrice : UILabel!
+    @IBOutlet weak var image : UIImageView!
     @IBOutlet weak var btnAddToCart : UIButton!
     
-    func setImage(){
-        let imageSize = CGSize(width: 100, height: 100)
-        var starZoneImage = UIImage(named: "StarZone Curved")
-        starZoneImage = starZoneImage?.imageResize(sizeChange: imageSize)
-        productImageView.image = starZoneImage
+    weak var delegate : FeaturedProductCollectionViewDelegate?
+    static let identifier = "featuredProductCollectionViewCell"
+    var product : ProductItem?
+    
+    
+    @IBAction func addToCartButonClick(){
+        self.delegate?.productCellSelected(self.product!, buttonTapped: self.btnAddToCart)
     }
     
 }

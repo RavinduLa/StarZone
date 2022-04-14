@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewItemSelectedDelegate {
+class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewItemSelectedDelegate, ViewAllProductsDelegate {
+    
+    
     
     @IBOutlet weak var table  : UITableView!
     
@@ -88,7 +90,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //setting the delegate from table view
         cell.delegate = self
-        
+        cell.viewAllDelegate = self
         
         cell.frame = tableView.bounds
         cell.layoutIfNeeded()
@@ -104,6 +106,18 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         performSegue(withIdentifier: "gotoProductSingleView", sender: nil)
     }
     
+    func navigateToViewAll(_ section: String) {
+        print("Navigate to view all from delegate recieved")
+        if section == "featured"{
+            performSegue(withIdentifier: "gotoFeaturedProducts", sender: nil)
+        }
+        else if section == "new"{
+            
+        }
+        else{
+            print("View all section is invalid")
+        }
+    }
     
     
     /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -168,4 +182,8 @@ protocol ProductCollectionViewCellDelegate: AnyObject{
 
 protocol TableViewItemSelectedDelegate: AnyObject{
     func tableViewCollectionItemSelected(_ product: ProductItem)
+}
+
+protocol ViewAllProductsDelegate : AnyObject{
+    func navigateToViewAll(_ section : String)
 }
