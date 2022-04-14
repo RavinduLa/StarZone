@@ -32,7 +32,7 @@
                         </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5ld-Lh-Q5U">
-                        <rect key="frame" x="0.0" y="34" width="320" height="97"/>
+                        <rect key="frame" x="5" y="34" width="310" height="97"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="97" id="xY8-wP-Bgx"/>
@@ -50,8 +50,8 @@
                     <constraint firstItem="5ld-Lh-Q5U" firstAttribute="top" secondItem="aG2-oS-rrz" secondAttribute="bottom" constant="5" id="Opp-Dd-Lzm"/>
                     <constraint firstAttribute="bottom" secondItem="5ld-Lh-Q5U" secondAttribute="bottom" id="PmD-uU-TjI"/>
                     <constraint firstAttribute="trailing" secondItem="Msy-sW-lpM" secondAttribute="trailing" constant="8" id="XsF-Ls-4hG"/>
-                    <constraint firstAttribute="trailing" secondItem="5ld-Lh-Q5U" secondAttribute="trailing" id="nP3-7L-0pd"/>
-                    <constraint firstItem="5ld-Lh-Q5U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ns0-nl-KCJ"/>
+                    <constraint firstAttribute="trailing" secondItem="5ld-Lh-Q5U" secondAttribute="trailing" constant="5" id="nP3-7L-0pd"/>
+                    <constraint firstItem="5ld-Lh-Q5U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ns0-nl-KCJ"/>
                     <constraint firstItem="aG2-oS-rrz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tMU-8o-a6c"/>
                     <constraint firstItem="aG2-oS-rrz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yB2-H3-DvR"/>
                 </constraints>
