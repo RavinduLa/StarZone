@@ -27,23 +27,25 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var currentTableCell : ProductTableViewCell?
     
     func setupSampleData(){
-        let productItem1 = ProductItem(id: "1", name: "Display", description: "Description of diplay", price: 78000.00)
-        let productItem2 = ProductItem(id: "2", name: "Mouse", description: "Description of mouse", price: 5000.00)
-        let productItem3 = ProductItem(id: "3", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
-        let productItem4 = ProductItem(id: "4", name: "Power bank", description: "Description of Power bank", price: 12000.00)
-        let productItem5 = ProductItem(id: "5", name: "Remote", description: "Description of Remote", price: 12000.00)
-        let productItem6 = ProductItem(id: "6", name: "Book", description: "Description of Book", price: 12000.00)
+        let productItem1 = ProductItem(id: "1", name: "Display",description: "Description of diplay", imageLink: "dfdsfs", price: 78000.00, isFeatured: true, isNew: false)
+        let productItem2 = ProductItem(id: "2", name: "Mouse",description: "Description of Mouse", imageLink: "dfdsfs", price: 5000.00, isFeatured: true, isNew: false)
+        let productItem3 = ProductItem(id: "3", name: "Keyboard",description: "Description of Keyboard", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem4 = ProductItem(id: "4", name: "Power bank",description: "Description of Power bank", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem5 = ProductItem(id: "5", name: "Remote",description: "Description of Remote", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem6 = ProductItem(id: "6", name: "Book",description: "Description of Book", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
         
-        let productItem7 = ProductItem(id: "7", name: "Display J", description: "Description of diplay", price: 78000.00)
-        let productItem8 = ProductItem(id: "8", name: "Mouse", description: "Description of mouse", price: 5000.00)
-        let productItem9 = ProductItem(id: "9", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
-        let productItem10 = ProductItem(id: "10", name: "Power bank", description: "Description of Power bank", price: 12000.00)
-        let productItem11 = ProductItem(id: "11", name: "Remote", description: "Description of Remote", price: 12000.00)
-        let productItem12 = ProductItem(id: "12", name: "Book", description: "Description of Book", price: 12000.00)
         
-        let productItem13 = ProductItem(id: "13", name: "Banana Flower", description: "Banana Flower Description", price: 12000.00)
         
-        featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6, productItem13])
+        let productItem7 = ProductItem(id: "7", name: "Display J",description: "Description of didplay J", imageLink: "dfdsfs", price: 78000.00, isFeatured: false, isNew: true)
+        let productItem8 = ProductItem(id: "8", name: "Mouse J",description: "Description of Mouse J", imageLink: "dfdsfs", price: 5000.00, isFeatured: false, isNew: true)
+        let productItem9 = ProductItem(id: "9", name: "Keyboard J",description: "Description of Keyboard J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        let productItem10 = ProductItem(id: "10", name: "Power bank J",description: "Description of Power bank J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        let productItem11 = ProductItem(id: "11", name: "Remote J",description: "Description of Remote J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        let productItem12 = ProductItem(id: "12", name: "Book J",description: "Description of Book J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        
+        
+        
+        featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
         newProductList.append(contentsOf: [productItem7,productItem8,productItem9,productItem10, productItem11, productItem12])
     }
 
