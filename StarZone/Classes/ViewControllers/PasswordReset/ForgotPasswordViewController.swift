@@ -15,7 +15,10 @@ class ForgotPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+   
+    @IBAction func btnSendResetLinkClick(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
