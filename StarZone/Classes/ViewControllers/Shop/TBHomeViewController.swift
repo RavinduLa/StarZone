@@ -112,7 +112,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             performSegue(withIdentifier: "gotoFeaturedProducts", sender: nil)
         }
         else if section == "new"{
-            
+            performSegue(withIdentifier: "gotoNewProducts", sender: nil)
         }
         else{
             print("View all section is invalid")

@@ -1191,7 +1191,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p42-8E-knO">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewProductsCollectionViewCell" id="p42-8E-knO" customClass="NewProductsCollectionViewCell" customModule="StarZone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="275"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="t5Z-bh-sHs">
@@ -1220,6 +1220,9 @@
                                                     <rect key="frame" x="8" y="186" width="150" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Add to cart"/>
+                                                    <connections>
+                                                        <action selector="addToCartButonClick" destination="p42-8E-knO" eventType="touchUpInside" id="qK8-ug-q1L"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1236,6 +1239,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="166" height="275"/>
+                                        <connections>
+                                            <outlet property="btnAddToCart" destination="ogV-ip-kBf" id="7Ea-gI-SaA"/>
+                                            <outlet property="image" destination="svD-tx-9D9" id="wwr-B5-C8j"/>
+                                            <outlet property="lblPrice" destination="pqe-oa-UR4" id="LK4-tj-9Br"/>
+                                            <outlet property="lblProductName" destination="AtT-er-8Jv" id="3f7-Nv-Y9n"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -1250,6 +1259,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6PK-F3-ih2"/>
+                    <connections>
+                        <outlet property="newProductsCollectionView" destination="r6t-70-td7" id="EeH-eL-Hh0"/>
+                        <segue destination="uoA-xA-f71" kind="presentation" identifier="gotoProductSingleView" id="Z5X-uC-mPI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1o-ET-wG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1422,7 +1435,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PQw-eh-g7H"/>
+        <segue reference="Z5X-uC-mPI"/>
         <segue reference="1hv-Is-CY7"/>
     </inferredMetricsTieBreakers>
     <resources>

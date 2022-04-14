@@ -2,25 +2,43 @@
 //  NewProductsCollectionViewCell.swift
 //  StarZone
 //
-//  Created by Ravindu Wataketiya on 2022-04-11.
+//  Created by Ravindu Wataketiya on 2022-04-14.
 //
 
 import UIKit
 
 class NewProductsCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "NewProductsCollectionViewCell"
-    
-    @IBOutlet weak var productNameLabel : UILabel!
-    @IBOutlet weak var priceLabel : UILabel!
-    @IBOutlet weak var productImageView : UIImageView!
+    @IBOutlet weak var lblProductName : UILabel!
+    @IBOutlet weak var lblPrice : UILabel!
+    @IBOutlet weak var image : UIImageView!
     @IBOutlet weak var btnAddToCart : UIButton!
     
+    weak var delegate : NewProductCollectionViewDelegate?
+    static let identifier = "NewProductsCollectionViewCell"
+    var product : ProductItem?
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "NewProductsCollectionViewCell", bundle: nil)
+    }
+    
+    
+    @IBAction func addToCartButonClick(){
+        self.delegate?.productCellSelected(self.product!, buttonTapped: self.btnAddToCart)
+    }
+    
+    public func configure(with product : ProductItem){
+        self.product = product
+        self.lblProductName.text = product.itemName
+        self.lblPrice.text = "Rs. \(String(format : "%.2f",product.price))"
+        setImage()
+    }
+    
     func setImage(){
-        let imageSize = CGSize(width: 100, height: 100)
-        var starZoneImage = UIImage(named: "StarZone Curved")
+        let imageSize = CGSize(width: 150, height: 121)
+        var starZoneImage = UIImage(named: "sample image")
         starZoneImage = starZoneImage?.imageResize(sizeChange: imageSize)
-        productImageView.image = starZoneImage
+        image.image = starZoneImage
     }
     
 }

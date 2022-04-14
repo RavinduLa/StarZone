@@ -55,7 +55,7 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         }
         else if self.lblSectionHeader.text == "New Products"{
             //navigate to all new products
-            print("")
+            moveToViewAllNew()
         }
         
     }
@@ -64,6 +64,10 @@ class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         self.viewAllDelegate?.navigateToViewAll("featured")
         print("View all delegate : \(viewAllDelegate)")
         print("navigate to view all featured delagate sent")
+    }
+    
+    func moveToViewAllNew(){
+        self.viewAllDelegate?.navigateToViewAll("new")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
