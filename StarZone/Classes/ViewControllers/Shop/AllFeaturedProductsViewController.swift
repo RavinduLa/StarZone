@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AllFeaturedProductsViewController: UIViewController, FeaturedProductCollectionViewDelegate {
+class AllFeaturedProductsViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FeaturedProductCollectionViewDelegate {
+    
+    
 
     @IBOutlet weak var featuredProductsCollectionView: UICollectionView!
     
@@ -18,6 +20,11 @@ class AllFeaturedProductsViewController: UIViewController, FeaturedProductCollec
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //featuredProductsCollectionView.register(FeaturedProductsCollectionViewCell.nib(), forCellWithReuseIdentifier: FeaturedProductsCollectionViewCell.identifier)
+        featuredProductsCollectionView.delegate = self
+        featuredProductsCollectionView.dataSource = self
+        //featuredProductsCollectionView.reloadData()
+        setupSampleData()
     }
     
     
@@ -37,6 +44,17 @@ class AllFeaturedProductsViewController: UIViewController, FeaturedProductCollec
     func productCellSelected(_ product: ProductItem, buttonTapped: UIButton) {
         self.selectedItem = product
         performSegue(withIdentifier: "gotoProductSingleView", sender: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return featuredProductList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = featuredProductsCollectionView.dequeueReusableCell(withReuseIdentifier: FeaturedProductsCollectionViewCell.identifier, for: indexPath) as! FeaturedProductsCollectionViewCell
+        cell.configure(with: featuredProductList[indexPath.row])
+        cell.delegate = self
+        return cell
     }
     
 
