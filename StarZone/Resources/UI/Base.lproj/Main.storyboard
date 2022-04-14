@@ -1165,6 +1165,7 @@
                     <navigationItem key="navigationItem" id="aM9-sf-mb1"/>
                     <connections>
                         <outlet property="featuredProductsCollectionView" destination="goJ-rc-7jh" id="Gls-uq-0hh"/>
+                        <segue destination="uoA-xA-f71" kind="presentation" identifier="gotoProductSingleView" id="PQw-eh-g7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRp-fF-4Xg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1338,6 +1339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="PQw-eh-g7H"/>
         <segue reference="1hv-Is-CY7"/>
     </inferredMetricsTieBreakers>
     <resources>
