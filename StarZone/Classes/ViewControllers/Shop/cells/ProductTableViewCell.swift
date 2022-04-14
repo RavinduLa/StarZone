@@ -8,10 +8,6 @@
 import UIKit
 
 class ProductTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ProductCollectionViewCellDelegate{
-    
-    
-    
-    
 
     
     @IBOutlet weak var collectionView : UICollectionView!

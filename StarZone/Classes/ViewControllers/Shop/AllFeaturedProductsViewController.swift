@@ -23,7 +23,7 @@ class AllFeaturedProductsViewController: UIViewController,UICollectionViewDelega
         //featuredProductsCollectionView.register(FeaturedProductsCollectionViewCell.nib(), forCellWithReuseIdentifier: FeaturedProductsCollectionViewCell.identifier)
         featuredProductsCollectionView.delegate = self
         featuredProductsCollectionView.dataSource = self
-        //featuredProductsCollectionView.reloadData()
+
         setupSampleData()
     }
     
@@ -56,6 +56,18 @@ class AllFeaturedProductsViewController: UIViewController,UICollectionViewDelega
         cell.delegate = self
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 166, height: 275)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
+    
+    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }*/
     
 
     

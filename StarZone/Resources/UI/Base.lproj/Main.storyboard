@@ -1082,7 +1082,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="goJ-rc-7jh">
-                                <rect key="frame" x="20" y="92" width="374" height="721"/>
+                                <rect key="frame" x="5" y="93" width="404" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M4l-1E-fEi">
                                     <size key="itemSize" width="166" height="275"/>
@@ -1117,7 +1117,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5i-Z1-SCp">
-                                                    <rect key="frame" x="8" y="201" width="150" height="54"/>
+                                                    <rect key="frame" x="8" y="186" width="150" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Add to cart"/>
                                                     <connections>
@@ -1129,13 +1129,12 @@
                                                 <constraint firstItem="cfK-fy-FHy" firstAttribute="top" secondItem="1YF-H7-a3i" secondAttribute="top" constant="8" id="Kpf-dY-q3G"/>
                                                 <constraint firstItem="exK-c5-jbh" firstAttribute="top" secondItem="cfK-fy-FHy" secondAttribute="bottom" constant="5" id="XQd-TF-MlW"/>
                                                 <constraint firstItem="V3v-kJ-6cD" firstAttribute="leading" secondItem="1YF-H7-a3i" secondAttribute="leading" constant="8" id="Zc0-Ow-cAr"/>
-                                                <constraint firstAttribute="bottom" secondItem="W5i-Z1-SCp" secondAttribute="bottom" constant="20" id="auD-Rc-WUT"/>
                                                 <constraint firstItem="W5i-Z1-SCp" firstAttribute="leading" secondItem="1YF-H7-a3i" secondAttribute="leading" constant="8" id="ccV-hY-NUe"/>
                                                 <constraint firstItem="cfK-fy-FHy" firstAttribute="leading" secondItem="1YF-H7-a3i" secondAttribute="leading" constant="8" id="ee8-JY-Hxd"/>
                                                 <constraint firstItem="V3v-kJ-6cD" firstAttribute="top" secondItem="exK-c5-jbh" secondAttribute="bottom" constant="5" id="kba-UT-b4L"/>
                                                 <constraint firstItem="exK-c5-jbh" firstAttribute="leading" secondItem="1YF-H7-a3i" secondAttribute="leading" constant="8" id="mOa-Kf-Ug1"/>
                                                 <constraint firstAttribute="trailing" secondItem="W5i-Z1-SCp" secondAttribute="trailing" constant="8" id="s5S-Vp-PMu"/>
-                                                <constraint firstItem="W5i-Z1-SCp" firstAttribute="top" secondItem="V3v-kJ-6cD" secondAttribute="bottom" constant="20" id="xWL-f1-60b"/>
+                                                <constraint firstItem="W5i-Z1-SCp" firstAttribute="top" secondItem="V3v-kJ-6cD" secondAttribute="bottom" constant="5" id="xWL-f1-60b"/>
                                                 <constraint firstAttribute="trailing" secondItem="cfK-fy-FHy" secondAttribute="trailing" constant="8" id="z6x-7i-Y8I"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -1157,15 +1156,15 @@
                         <viewLayoutGuide key="safeArea" id="EKz-uh-IgZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EKz-uh-IgZ" firstAttribute="trailing" secondItem="goJ-rc-7jh" secondAttribute="trailing" constant="20" id="HtH-tM-H2R"/>
-                            <constraint firstItem="goJ-rc-7jh" firstAttribute="top" secondItem="EKz-uh-IgZ" secondAttribute="top" constant="4" id="XWu-hz-MZO"/>
+                            <constraint firstItem="EKz-uh-IgZ" firstAttribute="trailing" secondItem="goJ-rc-7jh" secondAttribute="trailing" constant="5" id="HtH-tM-H2R"/>
+                            <constraint firstItem="goJ-rc-7jh" firstAttribute="top" secondItem="EKz-uh-IgZ" secondAttribute="top" constant="5" id="XWu-hz-MZO"/>
                             <constraint firstItem="goJ-rc-7jh" firstAttribute="bottom" secondItem="EKz-uh-IgZ" secondAttribute="bottom" id="Xrz-8G-Scp"/>
-                            <constraint firstItem="goJ-rc-7jh" firstAttribute="leading" secondItem="EKz-uh-IgZ" secondAttribute="leading" constant="20" id="bER-xr-Lx4"/>
+                            <constraint firstItem="goJ-rc-7jh" firstAttribute="leading" secondItem="EKz-uh-IgZ" secondAttribute="leading" constant="5" id="bER-xr-Lx4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aM9-sf-mb1"/>
                     <connections>
-                        <outlet property="featuredProductsCollectionView" destination="goJ-rc-7jh" id="EEP-8V-NDq"/>
+                        <outlet property="featuredProductsCollectionView" destination="goJ-rc-7jh" id="Gls-uq-0hh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRp-fF-4Xg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
