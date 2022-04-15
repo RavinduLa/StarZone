@@ -32,7 +32,7 @@ class ProductSinglePageViewController: UIViewController {
         
         let cvArgPrice = self.seletedItem?.price  as! CVarArg
         
-        self.txtCode.text = self.seletedItem?.itemId
+        self.txtCode.text = self.seletedItem?.code
         self.txtProdcutName.text = self.seletedItem?.itemName
         self.txtDescription.text = self.seletedItem?.itemDescription
         self.txtPrice.text = "Rs. \(String(format : "%.2f",cvArgPrice))"

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewItemSelectedDelegate, ViewAllProductsDelegate {
     
@@ -19,6 +20,8 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //var items = ["1", "2", "3", "4", "5", "6"]
     
     
+    let db = Firestore.firestore()
+    
     
     var featuredProductList : [ProductItem] = [ProductItem]()
     var newProductList : [ProductItem] = [ProductItem]()
@@ -27,24 +30,31 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var currentTableCell : ProductTableViewCell?
     
     func setupSampleData(){
-        let productItem1 = ProductItem(id: "1", name: "Display", description: "Description of diplay", price: 78000.00)
-        let productItem2 = ProductItem(id: "2", name: "Mouse", description: "Description of mouse", price: 5000.00)
-        let productItem3 = ProductItem(id: "3", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
-        let productItem4 = ProductItem(id: "4", name: "Power bank", description: "Description of Power bank", price: 12000.00)
-        let productItem5 = ProductItem(id: "5", name: "Remote", description: "Description of Remote", price: 12000.00)
-        let productItem6 = ProductItem(id: "6", name: "Book", description: "Description of Book", price: 12000.00)
+        /*let productItem1 = ProductItem(id: "1", name: "Display",description: "Description of diplay", imageLink: "dfdsfs", price: 78000.00, isFeatured: true, isNew: false)
+        let productItem2 = ProductItem(id: "2", name: "Mouse",description: "Description of Mouse", imageLink: "dfdsfs", price: 5000.00, isFeatured: true, isNew: false)
+        let productItem3 = ProductItem(id: "3", name: "Keyboard",description: "Description of Keyboard", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem4 = ProductItem(id: "4", name: "Power bank",description: "Description of Power bank", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem5 = ProductItem(id: "5", name: "Remote",description: "Description of Remote", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem6 = ProductItem(id: "6", name: "Book",description: "Description of Book", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
         
-        let productItem7 = ProductItem(id: "7", name: "Display J", description: "Description of diplay", price: 78000.00)
-        let productItem8 = ProductItem(id: "8", name: "Mouse", description: "Description of mouse", price: 5000.00)
-        let productItem9 = ProductItem(id: "9", name: "Keyboard", description: "Description of keyboard", price: 12000.00)
-        let productItem10 = ProductItem(id: "10", name: "Power bank", description: "Description of Power bank", price: 12000.00)
-        let productItem11 = ProductItem(id: "11", name: "Remote", description: "Description of Remote", price: 12000.00)
-        let productItem12 = ProductItem(id: "12", name: "Book", description: "Description of Book", price: 12000.00)
         
-        let productItem13 = ProductItem(id: "13", name: "Banana Flower", description: "Banana Flower Description", price: 12000.00)
         
-        featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6, productItem13])
-        newProductList.append(contentsOf: [productItem7,productItem8,productItem9,productItem10, productItem11, productItem12])
+        let productItem7 = ProductItem(id: "7", name: "Display J",description: "Description of didplay J", imageLink: "dfdsfs", price: 78000.00, isFeatured: false, isNew: true)
+        let productItem8 = ProductItem(id: "8", name: "Mouse J",description: "Description of Mouse J", imageLink: "dfdsfs", price: 5000.00, isFeatured: false, isNew: true)
+        let productItem9 = ProductItem(id: "9", name: "Keyboard J",description: "Description of Keyboard J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        let productItem10 = ProductItem(id: "10", name: "Power bank J",description: "Description of Power bank J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        let productItem11 = ProductItem(id: "11", name: "Remote J",description: "Description of Remote J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        let productItem12 = ProductItem(id: "12", name: "Book J",description: "Description of Book J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true)
+        
+        */
+        
+        //featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
+        //newProductList.append(contentsOf: [productItem7,productItem8,productItem9,productItem10, productItem11, productItem12])
+        
+        
+        //get data from firebase service
+        self.featuredProductList = ProductItemsLists.featuredProductList
+        self.newProductList = ProductItemsLists.newProductList
     }
 
     override func viewDidLoad() {
@@ -58,9 +68,52 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table.dataSource = self
         //table.rowHeight = UITableView.automaticDimension
         //table.estimatedRowHeight = 600
-        table.reloadData()
-        setupSampleData()
         
+        
+        loadProducts()
+        
+        table.reloadData()
+        
+        //setupSampleData()
+        
+        if featuredProductList.isEmpty{
+            print("TBHome featured product list empty")
+        }
+        for item in featuredProductList{
+            print("IN view did load in TBHome")
+            print("Featured product item name : \(item.itemName)")
+        }
+        
+    }
+    
+    //load all products from firestore
+    func loadProducts(){
+        db.collection("products").getDocuments { snapshot, error in
+            if error != nil{
+                print("Error getting products")
+            }
+            else{
+                if let snapshot = snapshot{
+                    
+                    for doc in snapshot.documents{
+                        let productItem : ProductItem = ProductItem(id: doc.documentID, name: doc["itemName"] as? String ?? "name", description: doc["itemDescription"] as? String ?? "desc", imageLink: doc["imageLink"] as? String ?? "link", price: doc["price"] as? Double ?? 0.00, isFeatured: doc["isFeatured"] as? Bool ?? false, isNew: doc["isNew"] as? Bool ?? false, code: doc["code"] as? String ?? "00")
+                        if productItem.isFeatured{
+                            self.featuredProductList.append(productItem)
+                        }
+                        else if productItem.isNew{
+                            self.newProductList.append(productItem)
+                        }
+                        else{
+                            print("\(productItem.itemName) is not a featured nor new product. Discarding...")
+                        }
+                    }
+                    
+                    self.table.reloadData()
+                    
+                    
+                }
+            }
+        }
     }
     
     
@@ -76,6 +129,9 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //set the currently going table cell
             self.currentTableCell = cell
             cell.configure(with: featuredProductList)
+            
+            
+            
             cell.lblSectionHeader.text = "Featured Products"
         }
         else if indexPath.row == 1{
@@ -166,6 +222,14 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //add the selected item for the single page here
             let viewController = segue.destination as! ProductSinglePageViewController
             viewController.seletedItem = self.selectedItem
+        }
+        else if segue.identifier == "gotoFeaturedProducts"{
+            let viewController = segue.destination as! AllFeaturedProductsViewController
+            viewController.featuredProductList = self.featuredProductList
+        }
+        else if segue.identifier == "gotoNewProducts"{
+            let viewController = segue.destination as! AllNewProductsViewController
+            viewController.newProductList = self.newProductList
         }
     }
     
