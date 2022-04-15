@@ -1,0 +1,6 @@
+framework module Pods_StarZone_StarZoneUITests {
+  umbrella header "Pods-StarZone-StarZoneUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
