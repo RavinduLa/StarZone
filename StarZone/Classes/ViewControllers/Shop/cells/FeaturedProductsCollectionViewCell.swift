@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FeaturedProductsCollectionViewCell: UICollectionViewCell {
     
@@ -31,7 +32,11 @@ class FeaturedProductsCollectionViewCell: UICollectionViewCell {
         self.product = product
         self.lblProductName.text = product.itemName
         self.lblPrice.text = "Rs. \(String(format : "%.2f",product.price))"
-        setImage()
+        
+        //setImage()
+        
+        //load the image
+        loadImageFromSDWebImage()
     }
     
     func setImage(){
@@ -39,6 +44,11 @@ class FeaturedProductsCollectionViewCell: UICollectionViewCell {
         var starZoneImage = UIImage(named: "sample image")
         starZoneImage = starZoneImage?.imageResize(sizeChange: imageSize)
         image.image = starZoneImage
+    }
+    
+    //loads the image with caching using SDWebImage
+    func loadImageFromSDWebImage(){
+        image.sd_setImage(with: URL(string: product!.imageLink), placeholderImage: UIImage(systemName: "photo"), options: .continueInBackground, completed: nil)
     }
     
 }

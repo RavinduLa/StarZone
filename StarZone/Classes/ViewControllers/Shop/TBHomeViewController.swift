@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import SVProgressHUD
 
 class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewItemSelectedDelegate, ViewAllProductsDelegate {
     
@@ -70,7 +71,9 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //table.estimatedRowHeight = 600
         
         
+        
         loadProducts()
+        
         
         table.reloadData()
         
@@ -88,12 +91,15 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //load all products from firestore
     func loadProducts(){
+        SVProgressHUD.show()
         db.collection("products").getDocuments { snapshot, error in
             if error != nil{
                 print("Error getting products")
+                SVProgressHUD.dismiss()
             }
             else{
                 if let snapshot = snapshot{
+                    
                     
                     for doc in snapshot.documents{
                         let productItem : ProductItem = ProductItem(id: doc.documentID, name: doc["itemName"] as? String ?? "name", description: doc["itemDescription"] as? String ?? "desc", imageLink: doc["imageLink"] as? String ?? "link", price: doc["price"] as? Double ?? 0.00, isFeatured: doc["isFeatured"] as? Bool ?? false, isNew: doc["isNew"] as? Bool ?? false, code: doc["code"] as? String ?? "00")
@@ -108,6 +114,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         }
                     }
                     
+                    SVProgressHUD.dismiss()
                     self.table.reloadData()
                     
                     

@@ -1014,6 +1014,7 @@
                                                     <rect key="frame" x="8" y="8" width="150" height="121"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="121" id="DCb-W1-WqH"/>
+                                                        <constraint firstAttribute="width" constant="150" id="MLa-mD-Fct"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5i-Z1-SCp">
@@ -1101,6 +1102,7 @@
                                                     <rect key="frame" x="8" y="8" width="150" height="121"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="121" id="Med-Qp-lyi"/>
+                                                        <constraint firstAttribute="width" constant="150" id="yk5-1v-u1B"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtT-er-8Jv">

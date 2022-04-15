@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class Product3CollectionViewCell: UICollectionViewCell {
     
@@ -27,7 +28,24 @@ class Product3CollectionViewCell: UICollectionViewCell {
         self.product = product
         self.productName.text = product.itemName
         self.price.text = "Rs. \(String(format : "%.2f",product.price))"
-        setImage()
+        
+        
+        //setImage()
+        //fetchImage()
+        
+        
+        
+        loadImageFromSDWebImage()
+        
+    }
+    
+    func clearSDWebImageCache(){
+        SDImageCache.shared.clearMemory()
+        SDImageCache.shared.clearDisk(onCompletion: nil)
+    }
+    
+    func loadImageFromSDWebImage(){
+        productImageView.sd_setImage(with: URL(string: product!.imageLink), placeholderImage: UIImage(systemName: "photo"), options: .continueInBackground, completed: nil)
     }
     
     func setImage(){
@@ -35,6 +53,27 @@ class Product3CollectionViewCell: UICollectionViewCell {
         var starZoneImage = UIImage(named: "sample image")
         starZoneImage = starZoneImage?.imageResize(sizeChange: imageSize)
         productImageView.image = starZoneImage
+    }
+    
+    //methodt to fetch the image manually
+    func fetchImage(){
+        guard let url = URL(string: product!.imageLink) else{
+            return
+        }
+        
+        let getDataTask = URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                self.productImageView.image = image
+            }
+
+        }
+        
+        getDataTask.resume()
     }
     
     //method called when tapping the add to cart button

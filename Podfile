@@ -9,6 +9,8 @@ target 'StarZone' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
+	pod 'SDWebImage'
+  	pod 'SVProgressHUD'
 
   target 'StarZoneTests' do
     inherit! :search_paths
