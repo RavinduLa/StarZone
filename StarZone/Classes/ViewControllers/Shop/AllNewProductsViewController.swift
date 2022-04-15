@@ -24,6 +24,8 @@ class AllNewProductsViewController: UIViewController,UICollectionViewDelegate, U
         setupSampleData()
     }
     
+    
+    
     func setupSampleData(){
         
         let productItem7 = ProductItem(id: "7", name: "Display J",description: "Description of didplay J", imageLink: "dfdsfs", price: 78000.00, isFeatured: false, isNew: true, code: "0001")

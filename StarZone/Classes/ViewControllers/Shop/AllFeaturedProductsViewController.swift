@@ -24,7 +24,7 @@ class AllFeaturedProductsViewController: UIViewController,UICollectionViewDelega
         featuredProductsCollectionView.delegate = self
         featuredProductsCollectionView.dataSource = self
 
-        setupSampleData()
+        //setupSampleData()
     }
     
     

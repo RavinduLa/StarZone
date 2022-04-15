@@ -223,6 +223,10 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let viewController = segue.destination as! ProductSinglePageViewController
             viewController.seletedItem = self.selectedItem
         }
+        else if segue.identifier == "gotoFeaturedProducts"{
+            let viewController = segue.destination as! AllFeaturedProductsViewController
+            viewController.featuredProductList = self.featuredProductList
+        }
     }
     
     //method for dismissing the Product Single View
