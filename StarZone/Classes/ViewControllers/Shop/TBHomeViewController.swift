@@ -91,9 +91,11 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //load all products from firestore
     func loadProducts(){
+        SVProgressHUD.show()
         db.collection("products").getDocuments { snapshot, error in
             if error != nil{
                 print("Error getting products")
+                SVProgressHUD.dismiss()
             }
             else{
                 if let snapshot = snapshot{
@@ -112,6 +114,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         }
                     }
                     
+                    SVProgressHUD.dismiss()
                     self.table.reloadData()
                     
                     
