@@ -814,13 +814,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYO-zL-GHg">
-                                <rect key="frame" x="25" y="52" width="273" height="42"/>
+                                <rect key="frame" x="25" y="114" width="273" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fx5-9E-97a">
-                                <rect key="frame" x="25" y="207" width="364" height="50"/>
+                                <rect key="frame" x="25" y="269" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lzC-6E-I3q"/>
                                 </constraints>
@@ -828,7 +828,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5O-Fb-rIy">
-                                <rect key="frame" x="25" y="287" width="364" height="40"/>
+                                <rect key="frame" x="25" y="349" width="364" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EtR-P8-ZGB"/>
                                 </constraints>
@@ -839,7 +839,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please enter your email address below. An email with a reset link will be sent to you." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhX-Cd-ivy">
-                                <rect key="frame" x="20" y="106" width="369" height="66"/>
+                                <rect key="frame" x="20" y="168" width="369" height="66"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="zXa-Eo-5BG"/>
@@ -868,6 +868,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhh-r4-7Ul">
+                                <rect key="frame" x="10" y="49" width="45.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="btnBackClick:" destination="Ukv-hM-XIu" eventType="touchUpInside" id="kf5-bl-ena"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zlf-Ny-qhx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -876,7 +884,8 @@
                             <constraint firstItem="C5O-Fb-rIy" firstAttribute="leading" secondItem="Zlf-Ny-qhx" secondAttribute="leading" constant="25" id="7dL-BM-r8r"/>
                             <constraint firstItem="OYO-zL-GHg" firstAttribute="leading" secondItem="Zlf-Ny-qhx" secondAttribute="leading" constant="25" id="GQp-yI-L6s"/>
                             <constraint firstItem="IaH-sh-Yrr" firstAttribute="leading" secondItem="Zlf-Ny-qhx" secondAttribute="leading" constant="5" id="J85-UX-lAh"/>
-                            <constraint firstItem="OYO-zL-GHg" firstAttribute="top" secondItem="Zlf-Ny-qhx" secondAttribute="top" constant="8" id="UG6-aY-G2c"/>
+                            <constraint firstItem="Xhh-r4-7Ul" firstAttribute="top" secondItem="Zlf-Ny-qhx" secondAttribute="top" constant="5" id="M8p-3S-QwV"/>
+                            <constraint firstItem="OYO-zL-GHg" firstAttribute="top" secondItem="Zlf-Ny-qhx" secondAttribute="top" constant="70" id="UG6-aY-G2c"/>
                             <constraint firstItem="Fx5-9E-97a" firstAttribute="leading" secondItem="Zlf-Ny-qhx" secondAttribute="leading" constant="25" id="bFp-Ik-3jj"/>
                             <constraint firstItem="Zlf-Ny-qhx" firstAttribute="trailing" secondItem="Fx5-9E-97a" secondAttribute="trailing" constant="25" id="fgv-NW-0So"/>
                             <constraint firstItem="RhX-Cd-ivy" firstAttribute="top" secondItem="OYO-zL-GHg" secondAttribute="bottom" constant="12" id="fjQ-yy-sF3"/>
@@ -886,9 +895,13 @@
                             <constraint firstItem="Zlf-Ny-qhx" firstAttribute="trailing" secondItem="C5O-Fb-rIy" secondAttribute="trailing" constant="25" id="whf-FD-oXJ"/>
                             <constraint firstItem="Fx5-9E-97a" firstAttribute="top" secondItem="RhX-Cd-ivy" secondAttribute="bottom" constant="35" id="xcp-Gq-BfR"/>
                             <constraint firstItem="Zlf-Ny-qhx" firstAttribute="trailing" secondItem="RhX-Cd-ivy" secondAttribute="trailing" constant="25" id="y4G-aE-q0x"/>
+                            <constraint firstItem="Xhh-r4-7Ul" firstAttribute="leading" secondItem="Zlf-Ny-qhx" secondAttribute="leading" constant="10" id="yVZ-JZ-KnG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0dq-37-4Gf"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="Fx5-9E-97a" id="khA-qd-qvP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UQ-tM-6bQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1391,6 +1404,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="StarZone Curved" width="1024" height="1024"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="checklist.rtl" catalog="system" width="128" height="105"/>
         <image name="homekit" catalog="system" width="128" height="106"/>

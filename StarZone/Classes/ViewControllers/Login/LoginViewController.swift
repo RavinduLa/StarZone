@@ -30,7 +30,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnForgotPasswordClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "gotoForgotPassword", sender: self)
+        //self.performSegue(withIdentifier: "gotoForgotPassword", sender: self)
+        transitionToForgotPassword()
     }
     
     @IBAction func btnLoginClick(_ sender: Any) {
@@ -105,6 +106,13 @@ class LoginViewController: UIViewController {
         print("Transition to tab bar block complete")
         //view.window?.rootViewController = tabBarViewController
         //view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToForgotPassword(){
+        let forgotPasswordViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.forgotPasswordViewController) as? ForgotPasswordViewController
+        forgotPasswordViewController?.modalPresentationStyle = .fullScreen
+        self.present(forgotPasswordViewController!, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(loginViewController!, animated: true)
     }
     
     

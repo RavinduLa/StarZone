@@ -95,7 +95,9 @@ class ProductSinglePageViewController: UIViewController {
     func showItemAddedAlert(){
         let addedAlert = UIAlertController(title: "Item Added", message: "Your item has been added to cart", preferredStyle: UIAlertController.Style.alert)
         
-        addedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        addedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action : UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }))
         present(addedAlert, animated: true, completion: nil)
     }
     
