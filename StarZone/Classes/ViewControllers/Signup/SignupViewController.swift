@@ -28,6 +28,10 @@ class SignupViewController: UIViewController {
         lblError.isHidden = true
     }
     
+    @IBAction func btnBackClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func btnSignupClick(_ sender: Any) {
         
         //get the errors if any

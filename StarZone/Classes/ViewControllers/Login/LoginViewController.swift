@@ -29,6 +29,10 @@ class LoginViewController: UIViewController {
         lblError.isHidden = true
     }
     
+    @IBAction func btnBackClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func btnForgotPasswordClick(_ sender: Any) {
         //self.performSegue(withIdentifier: "gotoForgotPassword", sender: self)
         transitionToForgotPassword()
