@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductSinglePageViewController: UIViewController {
     
@@ -39,9 +40,9 @@ class ProductSinglePageViewController: UIViewController {
         updateCount()
         
         
-        setImage()
-
-        // Do any additional setup after loading the view.
+        //setImage()
+        
+        loadImageFromSDWebImage()
     }
     
     func setImage(){
@@ -52,6 +53,11 @@ class ProductSinglePageViewController: UIViewController {
         let starZoneImage = UIImage(contentsOfFile: path!)!
         //let starZoneImage = UIImage(named: "StarZone Curved")!
         self.imgProduct.image = starZoneImage
+    }
+    
+    //loads the image with caching using SDWebImage
+    func loadImageFromSDWebImage(){
+        imgProduct.sd_setImage(with: URL(string: seletedItem!.imageLink), placeholderImage: UIImage(systemName: "photo"), options: .continueInBackground, completed: nil)
     }
     
     @IBAction func decrementButtonClick(_ sender: Any) {
