@@ -10,6 +10,7 @@
 		63356C047361E07A5DD64522 /* Pods_StarZone_StarZoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADA4FBB1FBEF88E3369809D /* Pods_StarZone_StarZoneUITests.framework */; };
 		92367120280957F800B1D069 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236711F280957F800B1D069 /* ProductService.swift */; };
 		9236712228095C5900B1D069 /* ProductItemsLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236712128095C5900B1D069 /* ProductItemsLists.swift */; };
+		92367125280A0C0E00B1D069 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92367124280A0C0E00B1D069 /* Constants.swift */; };
 		923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */; };
 		923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */; };
 		923B82CE27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */; };
@@ -79,6 +80,7 @@
 		7C3832679B531A4D116214B9 /* Pods_StarZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9236711F280957F800B1D069 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		9236712128095C5900B1D069 /* ProductItemsLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsLists.swift; sourceTree = "<group>"; };
+		92367124280A0C0E00B1D069 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatuerdProdutsViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92367123280A0BFE00B1D069 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				92367124280A0C0E00B1D069 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		923B82C727F89E3A00EBF9D8 /* PasswordReset */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		928B0C5727F6426400DA5032 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				92367123280A0BFE00B1D069 /* Helpers */,
 				928B0C5B27F6428A00DA5032 /* Services */,
 				928B0C5A27F6428500DA5032 /* Models */,
 				928B0C5927F6427900DA5032 /* ViewControllers */,
@@ -641,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				928CF01427F7990700D359F1 /* AboutUsViewController.swift in Sources */,
+				92367125280A0C0E00B1D069 /* Constants.swift in Sources */,
 				928F5A832806BD11005E65BE /* CartTableViewCell.swift in Sources */,
 				9236712228095C5900B1D069 /* ProductItemsLists.swift in Sources */,
 				928866AE2802170700AF60C8 /* MyOrdersViewController.swift in Sources */,

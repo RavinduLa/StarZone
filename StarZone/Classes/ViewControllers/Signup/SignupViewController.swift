@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignupViewController: UIViewController {
     
@@ -39,12 +41,87 @@ class SignupViewController: UIViewController {
             //create ths user
             lblError.isHidden = true
             print("Creating user")
+            
+            //create cleaned versions of the data
+            let fullName = txtFullName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            //create the user
+            Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
+                
+                //check for errors
+                if error != nil {
+                    //if error is not nil there is an error
+                    self.showErrorMessage("Error creating user")
+                }
+                else{
+                    //user created successfully. Store the names
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["fullName" : fullName, "email" : email,
+                                                               "uid" : result!.user.uid]) { (error) in
+                        if error != nil{
+                            //show error message
+                            self.showErrorMessage("Firstname and last name not captured in the db")
+                        }
+                    }
+                    
+                    Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+                        if error != nil{
+                            print("Sending verification email failed")
+                        }
+                        else{
+                            self.showLoginAlert(title: "Successful", message: "Your account has been created and a verification link has been sent to your email. Please click the link to verify your email and then login.")
+                        }
+                    })
+                    
+                    
+                }
+            }
         }
     }
     
+    @IBAction func btnLoginClick(_ sender: Any) {
+        transitionToLogin()
+    }
     
     
+    func showLoginAlert(title : String, message : String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action : UIAlertAction) in
+            self.logoutAndTransition()
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     
+    func logoutAndTransition(){
+        do{
+            try Auth.auth().signOut()
+            self.transitionToLanding()
+        }catch let error{
+            print("Logout error : \(error)")
+        }
+        
+    }
+    
+    func transitionToLanding(){
+        let landingViewController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.landingViewController) as? LandingViewController
+        view.window?.rootViewController = landingViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToTabBarHome(){
+        let tabBarViewController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.tabBarViewController) as? ProductTabBarController
+        view.window?.rootViewController = tabBarViewController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    func transitionToLogin(){
+        let loginViewController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.loginViewController) as? LoginViewController
+        view.window?.rootViewController = loginViewController
+        view.window?.makeKeyAndVisible()
+    }
     
     func validateFields() -> String?{
         //check that all the fields are filled
