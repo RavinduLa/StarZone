@@ -21,12 +21,12 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     
     func setupSampleData(){
         
-        let productItem1 = ProductItem(id: "1", name: "Display",description: "Description of diplay", imageLink: "dfdsfs", price: 78000.00, isFeatured: true, isNew: false)
-        let productItem2 = ProductItem(id: "2", name: "Mouse",description: "Description of Mouse", imageLink: "dfdsfs", price: 5000.00, isFeatured: true, isNew: false)
-        let productItem3 = ProductItem(id: "3", name: "Keyboard",description: "Description of Keyboard", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
-        let productItem4 = ProductItem(id: "4", name: "Power bank",description: "Description of Power bank", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
-        let productItem5 = ProductItem(id: "5", name: "Remote",description: "Description of Remote", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
-        let productItem6 = ProductItem(id: "6", name: "Book",description: "Description of Book", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false)
+        let productItem1 = ProductItem(id: "1", name: "Display",description: "Description of diplay", imageLink: "dfdsfs", price: 78000.00, isFeatured: true, isNew: false, code: "0001")
+        let productItem2 = ProductItem(id: "2", name: "Mouse",description: "Description of Mouse", imageLink: "dfdsfs", price: 5000.00, isFeatured: true, isNew: false, code: "0001")
+        let productItem3 = ProductItem(id: "3", name: "Keyboard",description: "Description of Keyboard", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false, code: "0001")
+        let productItem4 = ProductItem(id: "4", name: "Power bank",description: "Description of Power bank", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false, code: "0001")
+        let productItem5 = ProductItem(id: "5", name: "Remote",description: "Description of Remote", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false, code: "0001")
+        let productItem6 = ProductItem(id: "6", name: "Book",description: "Description of Book", imageLink: "dfdsfs", price: 12000.00, isFeatured: true, isNew: false, code: "0001")
         
         
         productList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
