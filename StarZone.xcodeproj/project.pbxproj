@@ -45,7 +45,6 @@
 		928B0C6027F6454B00DA5032 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C5F27F6454B00DA5032 /* LoginViewController.swift */; };
 		928B0C6327F6462300DA5032 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6227F6462300DA5032 /* LandingViewController.swift */; };
 		928B0C6627F655C700DA5032 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6527F655C700DA5032 /* SignupViewController.swift */; };
-		928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */; };
 		928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B0C6A27F65E4900DA5032 /* FooterViewController.swift */; };
 		928CF01427F7990700D359F1 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928CF01327F7990700D359F1 /* AboutUsViewController.swift */; };
 		928F5A7E2806B590005E65BE /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F5A7D2806B590005E65BE /* CartItem.swift */; };
@@ -119,7 +118,6 @@
 		928B0C5F27F6454B00DA5032 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		928B0C6227F6462300DA5032 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		928B0C6527F655C700DA5032 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavViewController.swift; sourceTree = "<group>"; };
 		928B0C6A27F65E4900DA5032 /* FooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewController.swift; sourceTree = "<group>"; };
 		928CF01327F7990700D359F1 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		928F5A7D2806B590005E65BE /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
@@ -364,7 +362,6 @@
 			isa = PBXGroup;
 			children = (
 				928B0C6527F655C700DA5032 /* SignupViewController.swift */,
-				928B0C6827F65DD500DA5032 /* SignInNavViewController.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -660,7 +657,6 @@
 				928B0C2327F6366300DA5032 /* SceneDelegate.swift in Sources */,
 				923B82D027F8C5AB00EBF9D8 /* AllProdctsViewController.swift in Sources */,
 				928F5A89280765B5005E65BE /* FeaturedProductsCollectionViewCell.swift in Sources */,
-				928B0C6927F65DD500DA5032 /* SignInNavViewController.swift in Sources */,
 				928B0C6B27F65E4900DA5032 /* FooterViewController.swift in Sources */,
 				928866B02802171600AF60C8 /* CartViewController.swift in Sources */,
 				928B0C6027F6454B00DA5032 /* LoginViewController.swift in Sources */,
