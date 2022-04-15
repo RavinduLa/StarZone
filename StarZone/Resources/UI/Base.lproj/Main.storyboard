@@ -227,35 +227,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarZone Curved" translatesAutoresizingMaskIntoConstraints="NO" id="FSz-2c-eUg">
-                                <rect key="frame" x="132" y="136" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FSz-2c-eUg" secondAttribute="height" multiplier="1:1" id="dw0-BW-NUc"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdi-4B-wUi">
-                                <rect key="frame" x="57" y="530" width="300" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="LOGIN"/>
-                                <connections>
-                                    <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wN-xT-ltd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4z-n2-ZSF">
-                                <rect key="frame" x="57" y="590" width="300" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="SIGNUP">
-                                    <color key="baseForegroundColor" systemColor="linkColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnSignupClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZw-UU-z4A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWR-Fa-kjn">
-                                <rect key="frame" x="149" y="650" width="116.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="GUEST LOGIN"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQv-3A-Ql6">
                                 <rect key="frame" x="5" y="745" width="404" height="48"/>
                                 <subviews>
@@ -276,32 +247,70 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YYd-2a-H8D">
+                                <rect key="frame" x="20" y="488" width="374" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-Kw-RxU">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KeE-gz-BHp"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                        <connections>
+                                            <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3K-bm-KtA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHH-Ks-XBa">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hRF-v1-meb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Signup"/>
+                                        <connections>
+                                            <action selector="btnSignupClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AIL-Br-5mH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlx-hu-4DD">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kFI-tp-gof"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Guest Login"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarZone Curved" translatesAutoresizingMaskIntoConstraints="NO" id="FSz-2c-eUg">
+                                <rect key="frame" x="82" y="118" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="RJG-L3-0y8"/>
+                                    <constraint firstAttribute="height" constant="250" id="SE2-Mr-idH"/>
+                                    <constraint firstAttribute="width" secondItem="FSz-2c-eUg" secondAttribute="height" multiplier="1:1" id="noP-tq-f9X"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="s4z-n2-ZSF" firstAttribute="top" secondItem="Xdi-4B-wUi" secondAttribute="bottom" constant="29" id="3W9-G5-4wq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nQv-3A-Ql6" secondAttribute="bottom" constant="20" id="4st-Mw-Asm"/>
-                            <constraint firstItem="Xdi-4B-wUi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="9ST-5M-Esh"/>
-                            <constraint firstItem="Xdi-4B-wUi" firstAttribute="top" secondItem="FSz-2c-eUg" secondAttribute="bottom" constant="244" id="ADI-QB-CS1"/>
-                            <constraint firstItem="FSz-2c-eUg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Cvb-BB-7lY"/>
-                            <constraint firstItem="TWR-Fa-kjn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JXt-5w-Wwj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s4z-n2-ZSF" secondAttribute="trailing" constant="57" id="MBA-qF-4N1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xdi-4B-wUi" secondAttribute="trailing" constant="57" id="XqO-AU-cef"/>
-                            <constraint firstItem="TWR-Fa-kjn" firstAttribute="top" secondItem="s4z-n2-ZSF" secondAttribute="bottom" constant="29" id="Ysm-pd-yKw"/>
-                            <constraint firstAttribute="trailing" secondItem="nQv-3A-Ql6" secondAttribute="trailing" constant="5" id="avC-JS-nd9"/>
-                            <constraint firstItem="FSz-2c-eUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="elp-PO-eV1"/>
-                            <constraint firstItem="nQv-3A-Ql6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="fik-mt-U0c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FSz-2c-eUg" secondAttribute="trailing" constant="132" id="waP-dx-yix"/>
-                            <constraint firstItem="s4z-n2-ZSF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="zsg-Oc-EDQ"/>
+                            <constraint firstItem="FSz-2c-eUg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="E11-FB-dZP"/>
+                            <constraint firstItem="YYd-2a-H8D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ETP-fF-smv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FSz-2c-eUg" secondAttribute="trailing" constant="82" id="GGo-WG-t9Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nQv-3A-Ql6" secondAttribute="bottom" constant="20" id="IlO-U5-s81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YYd-2a-H8D" secondAttribute="trailing" constant="20" id="QkX-aK-rjm"/>
+                            <constraint firstItem="FSz-2c-eUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="WkH-db-n1p"/>
+                            <constraint firstItem="nQv-3A-Ql6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="YbS-Cg-vK2"/>
+                            <constraint firstItem="YYd-2a-H8D" firstAttribute="top" secondItem="FSz-2c-eUg" secondAttribute="bottom" constant="120" id="as1-BH-F9x"/>
+                            <constraint firstAttribute="trailing" secondItem="nQv-3A-Ql6" secondAttribute="trailing" constant="5" id="giE-IS-VpG"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eiR-b2-2N7"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnLogin" destination="Xdi-4B-wUi" id="wiu-mV-mwl"/>
-                        <outlet property="btnSignup" destination="s4z-n2-ZSF" id="kow-gB-Vsm"/>
+                        <outlet property="btnLogin" destination="KyF-Kw-RxU" id="Nuz-rb-HOr"/>
+                        <outlet property="btnSignup" destination="yHH-Ks-XBa" id="l27-u0-bKZ"/>
                         <segue destination="PXR-7G-jeM" kind="show" identifier="gotoSignup" id="2RV-Oq-CaO"/>
                         <segue destination="Rh4-dO-owo" kind="show" identifier="gotoLogin" id="Wvm-hK-uQG"/>
                     </connections>
@@ -1362,9 +1371,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
