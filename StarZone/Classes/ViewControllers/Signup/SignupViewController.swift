@@ -8,11 +8,18 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+    
+    @IBOutlet weak var lblError: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        setupElements()
+    }
+    
+    func setupElements(){
+        lblError.isHidden = true
     }
     
 

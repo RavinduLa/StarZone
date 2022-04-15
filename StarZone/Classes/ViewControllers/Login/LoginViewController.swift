@@ -11,11 +11,16 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var btnForgotPassword: UIButton!
     @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var lblError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupElements()
+    }
+    
+    func setupElements(){
+        lblError.isHidden = true
     }
     
     @IBAction func btnForgotPasswordClick(_ sender: Any) {
