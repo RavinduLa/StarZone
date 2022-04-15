@@ -21,7 +21,8 @@ class AllNewProductsViewController: UIViewController,UICollectionViewDelegate, U
         // Do any additional setup after loading the view.
         newProductsCollectionView.delegate = self
         newProductsCollectionView.dataSource = self
-        setupSampleData()
+        
+        //setupSampleData()
     }
     
     
