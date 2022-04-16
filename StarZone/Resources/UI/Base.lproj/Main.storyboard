@@ -1236,7 +1236,7 @@
             </objects>
             <point key="canvasLocation" x="1114.4927536231885" y="2592.8571428571427"/>
         </scene>
-        <!--All Featured Products View Controller-->
+        <!--Featured Products-->
         <scene sceneID="93F-jz-Lqa">
             <objects>
                 <viewController id="Njk-NY-CBM" customClass="AllFeaturedProductsViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
@@ -1326,7 +1326,7 @@
                             <constraint firstItem="goJ-rc-7jh" firstAttribute="leading" secondItem="EKz-uh-IgZ" secondAttribute="leading" constant="5" id="bER-xr-Lx4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aM9-sf-mb1"/>
+                    <navigationItem key="navigationItem" title="Featured Products" id="aM9-sf-mb1"/>
                     <connections>
                         <outlet property="featuredProductsCollectionView" destination="goJ-rc-7jh" id="Gls-uq-0hh"/>
                         <segue destination="uoA-xA-f71" kind="presentation" identifier="gotoProductSingleView" id="PQw-eh-g7H"/>
@@ -1336,7 +1336,7 @@
             </objects>
             <point key="canvasLocation" x="417" y="3325"/>
         </scene>
-        <!--All New Products View Controller-->
+        <!--New Products-->
         <scene sceneID="m7g-bh-oke">
             <objects>
                 <viewController id="7sH-HS-5yt" customClass="AllNewProductsViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
@@ -1422,7 +1422,7 @@
                             <constraint firstItem="1oY-aq-pd3" firstAttribute="trailing" secondItem="r6t-70-td7" secondAttribute="trailing" constant="5" id="M1W-yR-A9a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6PK-F3-ih2"/>
+                    <navigationItem key="navigationItem" title="New Products" id="6PK-F3-ih2"/>
                     <connections>
                         <outlet property="newProductsCollectionView" destination="r6t-70-td7" id="EeH-eL-Hh0"/>
                         <segue destination="uoA-xA-f71" kind="presentation" identifier="gotoProductSingleView" id="Z5X-uC-mPI"/>
