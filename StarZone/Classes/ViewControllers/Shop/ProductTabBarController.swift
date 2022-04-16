@@ -11,18 +11,19 @@ import FirebaseFirestore
 class ProductTabBarController: UITabBarController {
     
     
-    var tempItemList : [ProductItem] = [ProductItem]()
+    //var tempItemList : [ProductItem] = [ProductItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //instantiate imutable ProductService type instance
-        let ps : ProductService = ProductService()
+        //let ps : ProductService = ProductService()
         //populate global variables with product data
-        ps.initializeProducData()
+        //ps.initializeProducData()
         
         
         // Observer is setup to receive cart item from Single view
+        print("Running product tabbar controller view did load")
         setupNotificationObserver()
     }
     

@@ -1,13 +1,13 @@
 //
-//  SignInNavViewController.swift
+//  PrivacyViewController.swift
 //  StarZone
 //
-//  Created by Ravindu Wataketiya on 2022-04-01.
+//  Created by Ravindu Wataketiya on 2022-04-16.
 //
 
 import UIKit
 
-class SignInNavViewController: UIViewController {
+class PrivacyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +16,11 @@ class SignInNavViewController: UIViewController {
     }
     
 
+    @IBAction func btnBackClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
