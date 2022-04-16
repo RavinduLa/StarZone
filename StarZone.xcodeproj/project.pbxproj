@@ -11,6 +11,8 @@
 		92367120280957F800B1D069 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236711F280957F800B1D069 /* ProductService.swift */; };
 		9236712228095C5900B1D069 /* ProductItemsLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236712128095C5900B1D069 /* ProductItemsLists.swift */; };
 		92367125280A0C0E00B1D069 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92367124280A0C0E00B1D069 /* Constants.swift */; };
+		92367127280A36EB00B1D069 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92367126280A36EB00B1D069 /* TermsAndConditionsViewController.swift */; };
+		92367129280A36F900B1D069 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92367128280A36F900B1D069 /* PrivacyViewController.swift */; };
 		923B82C927F89E5100EBF9D8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */; };
 		923B82CB27F8A82C00EBF9D8 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */; };
 		923B82CE27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */; };
@@ -81,6 +83,8 @@
 		9236711F280957F800B1D069 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		9236712128095C5900B1D069 /* ProductItemsLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsLists.swift; sourceTree = "<group>"; };
 		92367124280A0C0E00B1D069 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		92367126280A36EB00B1D069 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		92367128280A36F900B1D069 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		923B82C827F89E5100EBF9D8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		923B82CA27F8A82C00EBF9D8 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		923B82CD27F8C59A00EBF9D8 /* FeatuerdProdutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatuerdProdutsViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				928CF01327F7990700D359F1 /* AboutUsViewController.swift */,
+				92367126280A36EB00B1D069 /* TermsAndConditionsViewController.swift */,
+				92367128280A36F900B1D069 /* PrivacyViewController.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				928B0C6027F6454B00DA5032 /* LoginViewController.swift in Sources */,
 				928866AC280216F700AF60C8 /* TBHomeViewController.swift in Sources */,
 				923C07FA27F9BBE90065110E /* ProductHomeViewController-prev.swift in Sources */,
+				92367129280A36F900B1D069 /* PrivacyViewController.swift in Sources */,
 				9254646B27FAD28000734EAA /* ProductSinglePageViewController.swift in Sources */,
 				9275680D28037C7B008C9823 /* ProductTableViewCell.swift in Sources */,
 				928B0C6327F6462300DA5032 /* LandingViewController.swift in Sources */,
@@ -684,6 +691,7 @@
 				928B0C2B27F6366300DA5032 /* StarZone.xcdatamodeld in Sources */,
 				928F5A7E2806B590005E65BE /* CartItem.swift in Sources */,
 				928F5A8728076412005E65BE /* AllFeaturedProductsViewController.swift in Sources */,
+				92367127280A36EB00B1D069 /* TermsAndConditionsViewController.swift in Sources */,
 				9254646927FAC2FF00734EAA /* ProductItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

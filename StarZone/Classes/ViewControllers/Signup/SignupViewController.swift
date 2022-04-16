@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignupViewController: UIViewController {
     
@@ -191,6 +192,43 @@ class SignupViewController: UIViewController {
         lblError.text = errorMessage
         lblError.isHidden = false
     }
+    
+    @IBAction func btnAboutUsClick(_ sender: Any) {
+        transitionToAboutUs()
+    }
+    
+    @IBAction func btnTermsAndConditionsClick(_ sender: Any) {
+        transitionToTermsAndConditions()
+    }
+    
+    
+    @IBAction func btnPrivacyClick(_ sender: Any) {
+        transitionToPrivacy()
+    }
+    
+    
+    func transitionToAboutUs(){
+        let aboutUsViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.aboutUsViewController) as?
+        AboutUsViewController
+        //aboutUsViewController?.modalPresentationStyle = .fullScreen
+        self.present(aboutUsViewController!, animated: true, completion: nil)
+    }
+    
+    func transitionToTermsAndConditions(){
+        let termsAndConditionsViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.termsAndConditionsViewController) as?
+        TermsAndConditionsViewController
+        termsAndConditionsViewController?.modalPresentationStyle = .fullScreen
+        self.present(termsAndConditionsViewController!, animated: true, completion: nil)
+    }
+    
+    func transitionToPrivacy(){
+        let privacyViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.privacyViewController) as?
+        PrivacyViewController
+        privacyViewController?.modalPresentationStyle = .fullScreen
+        self.present(privacyViewController!, animated: true, completion: nil)
+    }
+    
+    
     
     
     /*

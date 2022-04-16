@@ -51,16 +51,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
+                                        <connections>
+                                            <action selector="btnAboutUsClick:" destination="PXR-7G-jeM" eventType="touchUpInside" id="64r-LR-1jS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-fd-ffb">
                                         <rect key="frame" x="134.5" y="0.0" width="135" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Terms and Conditions"/>
+                                        <connections>
+                                            <action selector="btnTermsAndConditionsClick:" destination="PXR-7G-jeM" eventType="touchUpInside" id="vur-ht-CGA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGd-E8-IzG">
                                         <rect key="frame" x="269.5" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
+                                        <connections>
+                                            <action selector="btnPrivacyClick:" destination="PXR-7G-jeM" eventType="touchUpInside" id="iPY-Zb-Jos"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -196,7 +205,7 @@
         <!--About Us View Controller-->
         <scene sceneID="NYe-JM-9Am">
             <objects>
-                <viewController id="Ii2-ZC-9KP" customClass="AboutUsViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUsVC" id="Ii2-ZC-9KP" customClass="AboutUsViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r1T-qg-u2P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,20 +256,121 @@
             </objects>
             <point key="canvasLocation" x="1639" y="-664"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms And Conditions View Controller-->
         <scene sceneID="TyA-n5-r6m">
             <objects>
-                <viewController id="M1j-m3-rw6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsAndConditionsVC" id="M1j-m3-rw6" customClass="TermsAndConditionsViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sgs-XJ-tko">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud8-X0-LAr">
+                                <rect key="frame" x="57.5" y="164" width="299" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-7O-Tct">
+                                <rect key="frame" x="20" y="241" width="374" height="133"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Our shop, our app, our terms, our condidions.Our shop, our app, our terms, our condidions.Our shop, our app, our terms, our condidions.Our shop, our app, our terms, our condidions.Our shop, our app, our terms, our condidions.Our shop, our app, our terms, our condidions. Our shop, our app, our terms, our condidions.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygP-0n-CTR">
+                                <rect key="frame" x="10" y="59" width="46" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="btnBackClick:" destination="M1j-m3-rw6" eventType="touchUpInside" id="pqX-hN-jWr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarZone Curved" translatesAutoresizingMaskIntoConstraints="NO" id="37c-hg-6JC">
+                                <rect key="frame" x="354" y="49" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xle-vG-Kd6"/>
+                                    <constraint firstAttribute="width" constant="50" id="yvz-99-cFI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eGi-Vp-RBS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="37c-hg-6JC" firstAttribute="top" secondItem="eGi-Vp-RBS" secondAttribute="top" constant="5" id="5bD-lO-8yW"/>
+                            <constraint firstItem="BIh-7O-Tct" firstAttribute="top" secondItem="ud8-X0-LAr" secondAttribute="bottom" constant="41" id="L9w-T3-RgQ"/>
+                            <constraint firstItem="eGi-Vp-RBS" firstAttribute="trailing" secondItem="BIh-7O-Tct" secondAttribute="trailing" constant="20" id="RSf-I2-fpb"/>
+                            <constraint firstItem="ygP-0n-CTR" firstAttribute="leading" secondItem="eGi-Vp-RBS" secondAttribute="leading" constant="10" id="fed-H8-oRd"/>
+                            <constraint firstItem="eGi-Vp-RBS" firstAttribute="trailing" secondItem="37c-hg-6JC" secondAttribute="trailing" constant="10" id="oLh-Bo-KL9"/>
+                            <constraint firstItem="eGi-Vp-RBS" firstAttribute="bottom" secondItem="BIh-7O-Tct" secondAttribute="bottom" constant="488" id="p3j-QH-xUj"/>
+                            <constraint firstItem="BIh-7O-Tct" firstAttribute="leading" secondItem="eGi-Vp-RBS" secondAttribute="leading" constant="20" id="qIj-RI-y7L"/>
+                            <constraint firstItem="ud8-X0-LAr" firstAttribute="top" secondItem="eGi-Vp-RBS" secondAttribute="top" constant="120" id="qUj-up-hpj"/>
+                            <constraint firstItem="ud8-X0-LAr" firstAttribute="centerX" secondItem="sgs-XJ-tko" secondAttribute="centerX" id="say-UY-Gew"/>
+                            <constraint firstItem="ygP-0n-CTR" firstAttribute="top" secondItem="eGi-Vp-RBS" secondAttribute="top" constant="15" id="wcS-Y5-4FB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hb-Vg-Kgi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="-678"/>
+            <point key="canvasLocation" x="2579.7101449275365" y="-664.28571428571422"/>
+        </scene>
+        <!--Privacy View Controller-->
+        <scene sceneID="fJy-tl-am4">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyVC" id="auN-t9-KzY" customClass="PrivacyViewController" customModule="StarZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P7u-pI-LU8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-8w-PTI">
+                                <rect key="frame" x="155" y="164" width="104" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJA-WP-MBl">
+                                <rect key="frame" x="10" y="59" width="46" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="btnBackClick:" destination="auN-t9-KzY" eventType="touchUpInside" id="7P3-li-6yC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarZone Curved" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-Gn-O6U">
+                                <rect key="frame" x="354" y="49" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4PB-RZ-JOP"/>
+                                    <constraint firstAttribute="height" constant="50" id="7lc-lF-sOs"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cON-7F-ZMg">
+                                <rect key="frame" x="20" y="241" width="374" height="133"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Basically we take as much data as we can because we can. Basically we take as much data as we can because we can. Basically we take as much data as we can because we can. Basically we take as much data as we can because we can.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aAd-Na-v4K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aAd-Na-v4K" firstAttribute="trailing" secondItem="pGZ-Gn-O6U" secondAttribute="trailing" constant="10" id="1h9-Mt-DMr"/>
+                            <constraint firstItem="aAd-Na-v4K" firstAttribute="bottom" secondItem="cON-7F-ZMg" secondAttribute="bottom" constant="488" id="4n9-Wz-qJT"/>
+                            <constraint firstItem="BJA-WP-MBl" firstAttribute="leading" secondItem="aAd-Na-v4K" secondAttribute="leading" constant="10" id="BlF-FD-9Lb"/>
+                            <constraint firstItem="cON-7F-ZMg" firstAttribute="top" secondItem="Uma-8w-PTI" secondAttribute="bottom" constant="41" id="F9d-yF-IlD"/>
+                            <constraint firstItem="aAd-Na-v4K" firstAttribute="trailing" secondItem="cON-7F-ZMg" secondAttribute="trailing" constant="20" id="LOq-42-M37"/>
+                            <constraint firstItem="Uma-8w-PTI" firstAttribute="top" secondItem="aAd-Na-v4K" secondAttribute="top" constant="120" id="Vmw-dp-sLT"/>
+                            <constraint firstItem="Uma-8w-PTI" firstAttribute="centerX" secondItem="P7u-pI-LU8" secondAttribute="centerX" id="YZb-8D-7wi"/>
+                            <constraint firstItem="cON-7F-ZMg" firstAttribute="leading" secondItem="aAd-Na-v4K" secondAttribute="leading" constant="20" id="c2d-ID-Za3"/>
+                            <constraint firstItem="pGZ-Gn-O6U" firstAttribute="top" secondItem="aAd-Na-v4K" secondAttribute="top" constant="5" id="dSc-Te-AkO"/>
+                            <constraint firstItem="BJA-WP-MBl" firstAttribute="top" secondItem="aAd-Na-v4K" secondAttribute="top" constant="15" id="jC8-3B-B21"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2H8-5L-XtB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3402.898550724638" y="-664.28571428571422"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -277,16 +387,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
+                                        <connections>
+                                            <action selector="btnAboutUsClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJh-hA-A9a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhO-hf-Scf">
                                         <rect key="frame" x="134.5" y="0.0" width="135" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Terms and Conditions"/>
+                                        <connections>
+                                            <action selector="btnTermsAndConditionsClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I57-No-jTB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIG-vN-cAz">
                                         <rect key="frame" x="269.5" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
+                                        <connections>
+                                            <action selector="btnPrivacyClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dos-mK-YYk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -391,16 +510,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
+                                        <connections>
+                                            <action selector="btnAboutUsClick:" destination="Rh4-dO-owo" eventType="touchUpInside" id="HDb-7A-dJp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n87-Ss-f13">
                                         <rect key="frame" x="134.5" y="0.0" width="135" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Terms and Conditions"/>
+                                        <connections>
+                                            <action selector="btnTermsAndConditionsClick:" destination="Rh4-dO-owo" eventType="touchUpInside" id="fdB-ku-J0B"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N48-LD-c6p">
                                         <rect key="frame" x="269.5" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
+                                        <connections>
+                                            <action selector="btnPrivacyClick:" destination="Rh4-dO-owo" eventType="touchUpInside" id="qL6-Sy-ZCc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -908,16 +1036,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us"/>
+                                        <connections>
+                                            <action selector="btnAboutUsClick:" destination="Ukv-hM-XIu" eventType="touchUpInside" id="MI3-wc-Hai"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEU-jr-0p7">
                                         <rect key="frame" x="134.5" y="0.0" width="135" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Terms and Conditions"/>
+                                        <connections>
+                                            <action selector="btnTermsAndConditionsClick:" destination="Ukv-hM-XIu" eventType="touchUpInside" id="AMb-TO-vrs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbP-8n-nbK">
                                         <rect key="frame" x="269.5" y="0.0" width="134.5" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
+                                        <connections>
+                                            <action selector="btnPrivacyClick:" destination="Ukv-hM-XIu" eventType="touchUpInside" id="qh9-Ie-4d1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
