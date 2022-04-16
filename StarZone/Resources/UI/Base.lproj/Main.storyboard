@@ -1535,7 +1535,9 @@
                             <constraint firstItem="DMY-73-DTu" firstAttribute="top" secondItem="vAf-lG-jp8" secondAttribute="top" constant="15" id="oGs-wV-r3t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cart" id="co9-wW-s4I"/>
+                    <navigationItem key="navigationItem" title="Cart" id="co9-wW-s4I">
+                        <barButtonItem key="rightBarButtonItem" title="Checkout" id="W53-3t-Ftr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblTotalAmount" destination="EYt-0n-03k" id="pGV-UI-XpA"/>
                         <outlet property="lblTotalPrice" destination="DMY-73-DTu" id="EiX-wz-Ued"/>
