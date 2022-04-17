@@ -12,13 +12,31 @@ import SVProgressHUD
 
 class MoreViewController: UIViewController {
 
+    @IBOutlet weak var lblEmail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        guard let user = Auth.auth().currentUser else{return}
+        lblEmail.text = user.email
     }
     
     @IBAction func btnLogoutClick(_ sender: Any) {
         showLogoutConfirmationAlert()
+    }
+    
+    @IBAction func btnAboutUsClick(_ sender: Any) {
+        transitionToAboutUs()
+    }
+    
+    
+    @IBAction func btnTermsAndConditionsClick(_ sender: Any) {
+        transitionToTermsAndConditions()
+    }
+    
+    @IBAction func btnPrivacyClick(_ sender: Any) {
+        transitionToPrivacy()
     }
     
     func handleLogout(){
@@ -64,6 +82,27 @@ class MoreViewController: UIViewController {
         guard let uWindow = window else { return }
         uWindow.rootViewController = landingViewController
         UIView.transition(with: uWindow, duration: 0.3, options: [.transitionFlipFromRight], animations: {}, completion: nil)
+    }
+    
+    func transitionToAboutUs(){
+        let aboutUsViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.aboutUsViewController) as?
+        AboutUsViewController
+        //aboutUsViewController?.modalPresentationStyle = .fullScreen
+        self.present(aboutUsViewController!, animated: true, completion: nil)
+    }
+    
+    func transitionToTermsAndConditions(){
+        let termsAndConditionsViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.termsAndConditionsViewController) as?
+        TermsAndConditionsViewController
+        termsAndConditionsViewController?.modalPresentationStyle = .fullScreen
+        self.present(termsAndConditionsViewController!, animated: true, completion: nil)
+    }
+    
+    func transitionToPrivacy(){
+        let privacyViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.StoryBoard.privacyViewController) as?
+        PrivacyViewController
+        privacyViewController?.modalPresentationStyle = .fullScreen
+        self.present(privacyViewController!, animated: true, completion: nil)
     }
     
     /*
