@@ -1181,22 +1181,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuK-XH-D4K">
-                                <rect key="frame" x="172" y="432.5" width="70" height="31"/>
+                                <rect key="frame" x="324.5" y="128" width="69.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                                 <connections>
                                     <action selector="btnLogoutClick:" destination="xfD-Uu-Zgg" eventType="touchUpInside" id="YQ9-82-G7a"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAo-F1-OJY">
+                                <rect key="frame" x="20" y="128" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnv-zX-nH2">
+                                <rect key="frame" x="20" y="168" width="40.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-1x-tvc">
+                                <rect key="frame" x="90" y="615" width="234" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-wm-60H">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rVD-qo-aYC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="About us"/>
+                                        <connections>
+                                            <action selector="btnAboutUsClick:" destination="xfD-Uu-Zgg" eventType="touchUpInside" id="RXc-fu-6KK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-pP-7j7">
+                                        <rect key="frame" x="0.0" y="49" width="234" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="z8w-rY-hCr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Terms and Conditions"/>
+                                        <connections>
+                                            <action selector="btnTermsAndConditionsClick:" destination="xfD-Uu-Zgg" eventType="touchUpInside" id="AoD-mJ-mvO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWP-PS-86S">
+                                        <rect key="frame" x="0.0" y="98" width="234" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eKs-LT-75s"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Privacy"/>
+                                        <connections>
+                                            <action selector="btnPrivacyClick:" destination="xfD-Uu-Zgg" eventType="touchUpInside" id="TpF-fd-7KV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AuG-6U-Zsk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RuK-XH-D4K" firstAttribute="centerY" secondItem="YZB-NW-wTf" secondAttribute="centerY" id="g2A-PQ-GB5"/>
-                            <constraint firstItem="RuK-XH-D4K" firstAttribute="centerX" secondItem="YZB-NW-wTf" secondAttribute="centerX" id="pDn-bT-H2U"/>
+                            <constraint firstItem="G9E-1x-tvc" firstAttribute="leading" secondItem="AuG-6U-Zsk" secondAttribute="leading" constant="90" id="1aN-l1-5ir"/>
+                            <constraint firstItem="XAo-F1-OJY" firstAttribute="top" secondItem="AuG-6U-Zsk" secondAttribute="top" constant="40" id="CgD-Pt-KZt"/>
+                            <constraint firstItem="AuG-6U-Zsk" firstAttribute="trailing" secondItem="RuK-XH-D4K" secondAttribute="trailing" constant="20" id="EXT-TE-nuQ"/>
+                            <constraint firstItem="XAo-F1-OJY" firstAttribute="leading" secondItem="AuG-6U-Zsk" secondAttribute="leading" constant="20" id="S6K-Wq-wgx"/>
+                            <constraint firstItem="RuK-XH-D4K" firstAttribute="top" secondItem="AuG-6U-Zsk" secondAttribute="top" constant="40" id="XTN-Kk-M0U"/>
+                            <constraint firstItem="gnv-zX-nH2" firstAttribute="leading" secondItem="AuG-6U-Zsk" secondAttribute="leading" constant="20" id="ZiZ-IS-2wa"/>
+                            <constraint firstItem="AuG-6U-Zsk" firstAttribute="trailing" secondItem="G9E-1x-tvc" secondAttribute="trailing" constant="90" id="bhL-WX-vJ3"/>
+                            <constraint firstItem="gnv-zX-nH2" firstAttribute="top" secondItem="XAo-F1-OJY" secondAttribute="bottom" constant="10" id="lf8-4i-K3T"/>
+                            <constraint firstItem="AuG-6U-Zsk" firstAttribute="bottom" secondItem="G9E-1x-tvc" secondAttribute="bottom" constant="50" id="zUF-7m-yqb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="More" id="UO7-Bz-tHs"/>
+                    <connections>
+                        <outlet property="lblEmail" destination="gnv-zX-nH2" id="2Sx-2O-aBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cu-ic-gQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
