@@ -78,7 +78,19 @@ class LoginViewController: UIViewController {
             else{
                 SVProgressHUD.dismiss()
                 print("Sign in Successful")
-                self.transitionToTabBarHome()
+                if Auth.auth().currentUser?.isEmailVerified == false{
+                    print("Email is not verified")
+                    do{
+                        try Auth.auth().signOut()
+                    }catch let error{
+                        print("Signout failed. Error : \(error)")
+                    }
+                    self.showEmailNotVerifiedAlert()
+                }
+                else{
+                    self.transitionToTabBarHome()
+                }
+                
             }
         }
         
@@ -88,6 +100,36 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnSignupClick(_ sender: Any) {
         transitionToSignup()
+    }
+    
+    func showEmailNotVerifiedAlert(){
+        
+        let emailNotVerifiedAlert = UIAlertController(title: "Email Not Verified", message: "Please check your inbox and click the confirmation link and verify your account. If youd did not receive the verification email click resend.", preferredStyle: UIAlertController.Style.alert)
+        
+        emailNotVerifiedAlert.addAction(UIAlertAction(title: "Got it", style: .cancel, handler: { (action : UIAlertAction) in
+            
+        }))
+        emailNotVerifiedAlert.addAction(UIAlertAction(title: "Resend", style: .default, handler: { (action : UIAlertAction) in
+            //cancel logout
+        }))
+        present(emailNotVerifiedAlert, animated: true, completion: nil)
+        
+    }
+    
+    func showAlert(title: String, message : String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action : UIAlertAction) in
+            
+        }))
+    }
+    
+    func resendVerificationLink(){
+        Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+            if error != nil{
+                print ("Error sending verification link")
+                self.showAlert(title: "Could Not Send Verification Email", message: "This could be due to bad network connection. Try again later on contact our customer support")
+            }
+        })
     }
     
     func transitionToSignup(){
