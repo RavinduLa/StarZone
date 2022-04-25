@@ -17,12 +17,16 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
+    @IBOutlet weak var btnToggleShowPassword: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
         setupElements()
+        if self.txtPassword.isSecureTextEntry {
+            btnToggleShowPassword.setTitle("Show Password", for: .normal)
+        }
     }
     
     func setupElements(){
@@ -31,6 +35,18 @@ class SignupViewController: UIViewController {
     
     @IBAction func btnBackClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func btnToggleShowPasswordClick(_ sender: Any) {
+        self.txtPassword.isSecureTextEntry = !self.txtPassword.isSecureTextEntry
+        self.txtConfirmPassword.isSecureTextEntry = !self.txtConfirmPassword.isSecureTextEntry
+        
+        if self.txtPassword.isSecureTextEntry{
+            self.btnToggleShowPassword.setTitle("Show Password", for: .normal)
+        }
+        else{
+            self.btnToggleShowPassword.setTitle("Hide Password", for: .normal)
+        }
     }
     
     @IBAction func btnSignupClick(_ sender: Any) {

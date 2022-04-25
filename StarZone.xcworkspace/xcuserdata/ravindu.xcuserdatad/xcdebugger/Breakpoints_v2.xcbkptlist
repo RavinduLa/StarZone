@@ -30,8 +30,8 @@
             filePath = "StarZone/Classes/ViewControllers/Login/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "transitionToTabBarHome()"
             landmarkType = "7">
          </BreakpointContent>
