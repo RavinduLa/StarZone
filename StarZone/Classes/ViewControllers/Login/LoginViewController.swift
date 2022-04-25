@@ -17,12 +17,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lblError: UILabel!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    
+    @IBOutlet weak var btnToggleShowPassword: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupElements()
+        if self.txtPassword.isSecureTextEntry {
+            btnToggleShowPassword.setTitle("Show Password", for: .normal)
+        }
     }
     
     func setupElements(){
@@ -97,6 +100,19 @@ class LoginViewController: UIViewController {
         
         
     }
+    
+    @IBAction func btnToggleShowPasswordClick(_ sender: Any) {
+        self.txtPassword.isSecureTextEntry = !self.txtPassword.isSecureTextEntry
+        
+        if self.txtPassword.isSecureTextEntry{
+            self.btnToggleShowPassword.setTitle("Show Password", for: .normal)
+        }
+        else{
+            self.btnToggleShowPassword.setTitle("Hide Password", for: .normal)
+        }
+        
+    }
+    
     
     @IBAction func btnSignupClick(_ sender: Any) {
         transitionToSignup()
@@ -204,4 +220,15 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension UITextField{
+    fileprivate func setPasswordToggleImage(_ button : UIButton){
+        if(isSecureTextEntry){
+            button.setImage(UIImage(named: "ic_password_visible"), for: .normal)
+        }else{
+            button.setImage(UIImage(named: "ic_password_invisible"), for: .normal)
+            
+        }
+    }
 }
