@@ -18,6 +18,7 @@ class ProductItem : NSObject{
     var isFeatured : Bool
     var isNew : Bool
     var code : String
+    var remainingQuantity : Int
     
     override init() {
         self.itemId = ""
@@ -28,9 +29,10 @@ class ProductItem : NSObject{
         self.isFeatured = false
         self.isNew = false
         self.code = ""
+        self.remainingQuantity = 1
     }
     
-    init(id: String, name : String, description : String, imageLink : String, price : Double, isFeatured : Bool, isNew : Bool, code :String) {
+    init(id: String, name : String, description : String, imageLink : String, price : Double, isFeatured : Bool, isNew : Bool, code :String, remainingQuantity : Int) {
         self.itemId = id
         self.itemName = name
         self.itemDescription = description
@@ -39,5 +41,6 @@ class ProductItem : NSObject{
         self.isFeatured = isFeatured
         self.isNew = isNew
         self.code = code
+        self.remainingQuantity = remainingQuantity
     }
 }

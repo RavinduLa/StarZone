@@ -27,18 +27,6 @@ class AllNewProductsViewController: UIViewController,UICollectionViewDelegate, U
     
     
     
-    func setupSampleData(){
-        
-        let productItem7 = ProductItem(id: "7", name: "Display J",description: "Description of didplay J", imageLink: "dfdsfs", price: 78000.00, isFeatured: false, isNew: true, code: "0001")
-        let productItem8 = ProductItem(id: "8", name: "Mouse J",description: "Description of Mouse J", imageLink: "dfdsfs", price: 5000.00, isFeatured: false, isNew: true, code: "0001")
-        let productItem9 = ProductItem(id: "9", name: "Keyboard J",description: "Description of Keyboard J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true, code: "0001")
-        let productItem10 = ProductItem(id: "10", name: "Power bank J",description: "Description of Power bank J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true, code: "0001")
-        let productItem11 = ProductItem(id: "11", name: "Remote J",description: "Description of Remote J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true, code: "0001")
-        let productItem12 = ProductItem(id: "12", name: "Book J",description: "Description of Book J", imageLink: "dfdsfs", price: 12000.00, isFeatured: false, isNew: true, code: "0001")
-        
-        newProductList.append(contentsOf: [productItem7,productItem8,productItem9,productItem10, productItem11, productItem12])
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newProductList.count
     }

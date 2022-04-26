@@ -28,7 +28,7 @@ class AllFeaturedProductsViewController: UIViewController,UICollectionViewDelega
     }
     
     
-    func setupSampleData(){
+    /*func setupSampleData(){
         
         let productItem1 = ProductItem(id: "1", name: "Display",description: "Description of diplay", imageLink: "dfdsfs", price: 78000.00, isFeatured: true, isNew: false, code: "0001")
         let productItem2 = ProductItem(id: "2", name: "Mouse",description: "Description of Mouse", imageLink: "dfdsfs", price: 5000.00, isFeatured: true, isNew: false, code: "0001")
@@ -39,7 +39,7 @@ class AllFeaturedProductsViewController: UIViewController,UICollectionViewDelega
         
         
         featuredProductList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
-    }
+    }*/
     
     func productCellSelected(_ product: ProductItem, buttonTapped: UIButton) {
         self.selectedItem = product
