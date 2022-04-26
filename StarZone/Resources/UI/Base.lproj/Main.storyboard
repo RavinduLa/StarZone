@@ -895,6 +895,7 @@
                     <connections>
                         <outlet property="imgProduct" destination="vHv-CY-Twr" id="wer-rD-gnu"/>
                         <outlet property="lblItemCount" destination="bON-bU-IK5" id="IEc-LC-9W1"/>
+                        <outlet property="lblRemainingQuantity" destination="v7t-dp-uaI" id="gUJ-8y-SvX"/>
                         <outlet property="txtCode" destination="VPQ-cv-1gZ" id="GVb-E3-csb"/>
                         <outlet property="txtDescription" destination="8uz-8v-v61" id="9Ic-gA-g8o"/>
                         <outlet property="txtPrice" destination="8XF-Ba-SBj" id="5Bt-Hy-ojz"/>
