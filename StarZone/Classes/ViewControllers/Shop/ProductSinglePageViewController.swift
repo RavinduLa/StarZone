@@ -38,7 +38,6 @@ class ProductSinglePageViewController: UIViewController {
         self.txtDescription.text = self.seletedItem?.itemDescription
         self.txtPrice.text = "Rs. \(String(format : "%.2f",cvArgPrice))"
         let remainingQuantity = self.seletedItem?.remainingQuantity ?? 1
-        print("Remaining quanity : \(self.seletedItem?.remainingQuantity)")
         
         if remainingQuantity > 1{
             self.lblRemainingQuantity.text = "\(remainingQuantity) Units Available"
