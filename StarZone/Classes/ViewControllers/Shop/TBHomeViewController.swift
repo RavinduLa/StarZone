@@ -102,7 +102,7 @@ class TBHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     
                     
                     for doc in snapshot.documents{
-                        let productItem : ProductItem = ProductItem(id: doc.documentID, name: doc["itemName"] as? String ?? "name", description: doc["itemDescription"] as? String ?? "desc", imageLink: doc["imageLink"] as? String ?? "link", price: doc["price"] as? Double ?? 0.00, isFeatured: doc["isFeatured"] as? Bool ?? false, isNew: doc["isNew"] as? Bool ?? false, code: doc["code"] as? String ?? "00")
+                        let productItem : ProductItem = ProductItem(id: doc.documentID, name: doc["itemName"] as? String ?? "name", description: doc["itemDescription"] as? String ?? "desc", imageLink: doc["imageLink"] as? String ?? "link", price: doc["price"] as? Double ?? 0.00, isFeatured: doc["isFeatured"] as? Bool ?? false, isNew: doc["isNew"] as? Bool ?? false, code: doc["code"] as? String ?? "00", remainingQuantity : doc["remainingQuantity"] as? Int ?? 0)
                         if productItem.isFeatured{
                             self.featuredProductList.append(productItem)
                         }

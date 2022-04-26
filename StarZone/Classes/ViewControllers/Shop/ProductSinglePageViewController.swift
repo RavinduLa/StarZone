@@ -16,7 +16,7 @@ class ProductSinglePageViewController: UIViewController {
     @IBOutlet weak var txtPrice: UILabel!
     @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var lblItemCount: UILabel!
-    
+    @IBOutlet weak var lblRemainingQuantity: UILabel!
     
     weak var seletedItem : ProductItem?
     var count : Int = 1{
@@ -37,6 +37,15 @@ class ProductSinglePageViewController: UIViewController {
         self.txtProdcutName.text = self.seletedItem?.itemName
         self.txtDescription.text = self.seletedItem?.itemDescription
         self.txtPrice.text = "Rs. \(String(format : "%.2f",cvArgPrice))"
+        let remainingQuantity = self.seletedItem?.remainingQuantity ?? 1
+        
+        if remainingQuantity > 1{
+            self.lblRemainingQuantity.text = "\(remainingQuantity) Units Available"
+        }
+        else{
+            self.lblRemainingQuantity.text = "\(remainingQuantity) Unit Available"
+        }
+        
         updateCount()
         
         

@@ -19,7 +19,7 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     var selectedItem : ProductItem?
     
     
-    func setupSampleData(){
+    /*func setupSampleData(){
         
         let productItem1 = ProductItem(id: "1", name: "Display",description: "Description of diplay", imageLink: "dfdsfs", price: 78000.00, isFeatured: true, isNew: false, code: "0001")
         let productItem2 = ProductItem(id: "2", name: "Mouse",description: "Description of Mouse", imageLink: "dfdsfs", price: 5000.00, isFeatured: true, isNew: false, code: "0001")
@@ -30,7 +30,7 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
         
         
         productList.append(contentsOf: [productItem1,productItem2,productItem3,productItem4, productItem5, productItem6])
-    }
+    }*/
     
     
     
@@ -57,7 +57,7 @@ class ProductHomeViewController: UIViewController , UICollectionViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSampleData()
+        //setupSampleData()
 
         // Do any additional setup after loading the view.
     }
