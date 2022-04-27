@@ -1532,8 +1532,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDW-nv-SaO">
-                                                    <rect key="frame" x="20" y="11" width="88.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDW-nv-SaO">
+                                                    <rect key="frame" x="20" y="11" width="194" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1578,6 +1578,7 @@
                                                 <constraint firstItem="VDW-nv-SaO" firstAttribute="top" secondItem="1WF-dh-Nlu" secondAttribute="topMargin" id="Gaf-wL-0C3"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="t1o-VH-VhB" secondAttribute="bottom" id="Umk-aw-VUP"/>
                                                 <constraint firstItem="VDW-nv-SaO" firstAttribute="leading" secondItem="1WF-dh-Nlu" secondAttribute="leadingMargin" id="dRC-6b-8RK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VDW-nv-SaO" secondAttribute="trailing" constant="140" id="dWE-5O-7uu"/>
                                                 <constraint firstItem="1T0-bI-b6o" firstAttribute="centerY" secondItem="1WF-dh-Nlu" secondAttribute="centerY" id="hIf-UP-YNi"/>
                                                 <constraint firstAttribute="trailing" secondItem="1T0-bI-b6o" secondAttribute="trailing" constant="5" id="pbJ-id-6NV"/>
                                             </constraints>
@@ -1682,7 +1683,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Z5X-uC-mPI"/>
+        <segue reference="PQw-eh-g7H"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="StarZone Curved" width="1024" height="1024"/>
