@@ -1618,6 +1618,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="co9-wW-s4I">
+                        <barButtonItem key="leftBarButtonItem" title="Clear Cart" id="rnC-BN-cHm">
+                            <connections>
+                                <action selector="btnDeleteAllCartItemsClick:" destination="S5n-lJ-YYL" id="0Uo-FY-0WW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Checkout" id="W53-3t-Ftr"/>
                     </navigationItem>
                     <connections>

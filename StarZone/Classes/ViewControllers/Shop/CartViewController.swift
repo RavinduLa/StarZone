@@ -101,6 +101,30 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         present(deleteAlert, animated: true, completion: nil)
     }
     
+    @IBAction func btnDeleteAllCartItemsClick(_ sender: Any) {
+        deleteAllCartItems()
+    }
+    
+    func deleteAllCartItems(){
+        //create the alert for deletion
+        let deleteAllAlert = UIAlertController(title: "Clear the cart?", message: "This cannot be undone", preferredStyle: UIAlertController.Style.alert)
+        deleteAllAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {(action : UIAlertAction) in
+            self.cartItemList.removeAll()
+            self.tableView.reloadData()
+            self.updateTotalPrice()
+            
+        }
+                                              )
+        )
+        
+        //add cancel button
+        //cancel style makes text bold
+        deleteAllAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action: UIAlertAction) in print("Handle cancel alert here")}))
+        
+        //present the alert
+        present(deleteAllAlert, animated: true, completion: nil)
+    }
+    
     //observer to receive new cart items from tabbar controller
     func setupNotificationObserver(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.addCartItemByNotification(notification:)), name: Notification.Name(rawValue: "addNewCartItem"), object: nil)
