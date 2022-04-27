@@ -42,8 +42,11 @@ class ProductSinglePageViewController: UIViewController {
         if remainingQuantity > 1{
             self.lblRemainingQuantity.text = "\(remainingQuantity) Units Available"
         }
-        else{
+        else if remainingQuantity == 1{
             self.lblRemainingQuantity.text = "\(remainingQuantity) Unit Available"
+        }
+        else{
+            self.lblRemainingQuantity.text = "Not Available"
         }
         
         updateCount()
@@ -93,12 +96,20 @@ class ProductSinglePageViewController: UIViewController {
             return
         }
         
-        let newCartItem = CartItem(product: addingItem, count: count)
+        //check if remaining quantity is 0
+        if addingItem.remainingQuantity <= 0{
+            showItemNotAvailableAlert()
+        }
+        else{
+            let newCartItem = CartItem(product: addingItem, count: count)
+            
+            //Notification center posts the new cart item to ProductTabBarController
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "sendCartItemtoTabBarController"), object: nil, userInfo: ["itemObject": newCartItem])
+            
+            showItemAddedAlert()
+        }
         
-        //Notification center posts the new cart item to ProductTabBarController
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "sendCartItemtoTabBarController"), object: nil, userInfo: ["itemObject": newCartItem])
         
-        showItemAddedAlert()
     }
     
     func showItemAddedAlert(){
@@ -108,6 +119,14 @@ class ProductSinglePageViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }))
         present(addedAlert, animated: true, completion: nil)
+    }
+    
+    func showItemNotAvailableAlert(){
+        let notAvailableAlert = UIAlertController(title: "Item Not Available", message: "This item is not available right now. Please check later or contact our sales team to get more info on arrival dates for stocks.", preferredStyle: UIAlertController.Style.alert)
+        notAvailableAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action : UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        present(notAvailableAlert, animated: true, completion: nil)
     }
     
     func popSingleView(){
