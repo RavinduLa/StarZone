@@ -42,8 +42,11 @@ class ProductSinglePageViewController: UIViewController {
         if remainingQuantity > 1{
             self.lblRemainingQuantity.text = "\(remainingQuantity) Units Available"
         }
-        else{
+        else if remainingQuantity == 1{
             self.lblRemainingQuantity.text = "\(remainingQuantity) Unit Available"
+        }
+        else{
+            self.lblRemainingQuantity.text = "Not Available"
         }
         
         updateCount()
