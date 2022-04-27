@@ -122,7 +122,7 @@ class ProductSinglePageViewController: UIViewController {
     }
     
     func showItemNotAvailableAlert(){
-        let notAvailableAlert = UIAlertController(title: "Item not available", message: "This item is not available right now. Please check later or contact our sales team to get more info on arrival dates for stocks.", preferredStyle: UIAlertController.Style.alert)
+        let notAvailableAlert = UIAlertController(title: "Item Not Available", message: "This item is not available right now. Please check later or contact our sales team to get more info on arrival dates for stocks.", preferredStyle: UIAlertController.Style.alert)
         notAvailableAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action : UIAlertAction) in
             self.dismiss(animated: true, completion: nil)
         }))
