@@ -63,20 +63,25 @@ class LoginViewController: UIViewController {
                 switch errorCode{
                 case 17008:
                     errorMessage = "Invalid Email"
+                    self.showAlert(title: errorMessage, message: "Please enter a valid email")
                 case 17009:
                     errorMessage = "Wrong password"
+                    self.showAlert(title: errorMessage, message: "")
                 case 17010:
-                    errorMessage = "Too many failed attempts. Try again later."
+                    errorMessage = "Too many failed attempts. Please try again later."
+                    self.showAlert(title: "Login Error", message: errorMessage)
                 case 17011:
                     errorMessage = "Wrong Email"
+                    self.showAlert(title: errorMessage, message: "The email you entered is not registered in our system")
                 default:
                     errorMessage = "Oops ! there was some error"
+                    self.showAlert(title: "Oops!", message: "An unknown error has occured with error code \(errorCode). Please try again later and make sure you are connected to the internet. If the issue persists please contact customer support with the error code.")
                     print("Other error")
                 }
                 
-                //self.lblError.text = error!.localizedDescription
-                self.lblError.text = errorMessage
-                self.lblError.isHidden = false
+                //self.lblError.text = errorMessage
+                //self.lblError.isHidden = false
+                
             }
             else{
                 SVProgressHUD.dismiss()
@@ -137,6 +142,7 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action : UIAlertAction) in
             
         }))
+        present(alert, animated: true, completion: nil)
     }
     
     func resendVerificationLink(){
