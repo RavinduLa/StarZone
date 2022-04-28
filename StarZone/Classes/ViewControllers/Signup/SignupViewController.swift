@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import SVProgressHUD
 
 class SignupViewController: UIViewController {
     
@@ -56,12 +57,17 @@ class SignupViewController: UIViewController {
         
         if error != nil{
             //show the error message
-            showErrorMessage(error!)
+            //showErrorMessage(error!)
+            //
+            //show the error alert
+            showErrorAlert(message: error!)
         }
         else{
             //create ths user
             lblError.isHidden = true
             print("Creating user")
+            
+            SVProgressHUD.show()
             
             //create cleaned versions of the data
             let fullName = txtFullName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -75,8 +81,10 @@ class SignupViewController: UIViewController {
                 if error != nil {
                     //if error is not nil there is an error
                     self.showErrorMessage("Error creating user")
+                    SVProgressHUD.dismiss()
                 }
                 else{
+                    SVProgressHUD.dismiss()
                     //user created successfully. Store the names
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["fullName" : fullName, "email" : email,
@@ -163,7 +171,7 @@ class SignupViewController: UIViewController {
         let cleanedPassword = txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if isPasswordLengthValid(cleanedPassword) == false{
-            return "Password must be of lenght between 6 - 15"
+            return "Password must be of length \n between 6 - 15"
         }
         
         //check if the passoword is secure
@@ -207,6 +215,14 @@ class SignupViewController: UIViewController {
     func showErrorMessage(_ errorMessage : String){
         lblError.text = errorMessage
         lblError.isHidden = false
+    }
+    
+    func showErrorAlert(message : String){
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action : UIAlertAction) in
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func btnAboutUsClick(_ sender: Any) {
